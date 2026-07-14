@@ -1,0 +1,135 @@
+* {
+	font-family: "JetBrainsMono Nerd Font";
+	white: #f7f7ff;
+	black: #1e1d35;
+	violet: #8000ff;
+	pink: #ff499e;
+	blue: #779be7;
+	orange: #ff6d33;
+
+	spacing:                     2;
+	separatorcolor:              var(foreground);
+	background-color:            transparent;
+
+	background:                  var(white);
+	foreground:		     var(black);
+
+	active-background:           var(black);
+	active-foreground:           var(white);
+
+	urgent-background:           var(violet);
+	urgent-foreground:	     var(black);
+
+	selected-normal-background:  var(black);
+	selected-normal-foreground:  var(white);
+
+	selected-active-background:  var(black);
+	selected-active-foreground:  var(white);
+
+	selected-urgent-background:  var(violet);
+	selected-urgent-foreground:  var(white);
+
+	normal-background:           var(background);
+	normal-foreground:           var(foreground);
+
+}
+window {
+	border-radius: 15px;
+	padding:          5;
+	background-color: var(background);
+	border:           3;
+	border-color:	  var(black);
+}
+mainbox {
+	padding: 10;
+	border:  9;
+}
+message {
+	padding:      1px ;
+	border-color: var(separatorcolor);
+	border:       2px 0px 0px ;
+}
+textbox {
+	text-color: var(foreground);
+}
+listview {
+	padding:      2px 0px 0px ;
+	scrollbar:    true;
+	border-color: var(separatorcolor);
+	spacing:      2px ;
+	fixed-height: 0;
+	border:       2px 0px 0px ;
+	columns:      2;
+	lines:	      8;
+}
+element {
+	border-radius: 15px;
+	padding: 5px 5px 5px 9px;
+	border:  0;
+}
+element normal.normal {
+	background-color: var(normal-background);
+	text-color:       var(normal-foreground);
+}
+element normal.urgent {
+	background-color: var(urgent-background);
+	text-color:       var(urgent-foreground);
+}
+element normal.active {
+	background-color: var(active-background);
+	text-color:       var(active-foreground);
+}
+element selected.normal {
+	background-color: var(selected-normal-background);
+	text-color:       var(selected-normal-foreground);
+}
+element selected.urgent {
+	background-color: var(selected-urgent-background);
+	text-color:       var(selected-urgent-foreground);
+}
+element selected.active {
+	background-color: var(selected-active-background);
+	text-color:       var(selected-active-foreground);
+}
+element-text {
+	background-color: inherit;
+	text-color:       inherit;
+}
+scrollbar {
+	width:        4px ;
+	padding:      0;
+	handle-width: 8px ;
+	border:       0;
+}
+mode-switcher {
+	border-color: var(separatorcolor);
+	border:       2px 0px 0px ;
+}
+button selected {
+	background-color: var(selected-normal-background);
+	text-color:       var(selected-normal-foreground);
+}
+inputbar {
+	padding:    1px ;
+	spacing:    0;
+	text-color: var(normal-foreground);
+	children:   [ "prompt","textbox-prompt-colon","entry","case-indicator" ];
+}
+case-indicator {
+	spacing:    0;
+	text-color: var(normal-foreground);
+}
+entry {
+	spacing:    0;
+	text-color: var(normal-foreground);
+}
+prompt {
+	spacing:    0;
+	text-color: var(normal-foreground);
+}
+textbox-prompt-colon {
+	margin:     0px 0.3000em 0.0000em 0.0000em ;
+	expand:     false;
+	str:        ":";
+	text-color: var(normal-foreground);
+}

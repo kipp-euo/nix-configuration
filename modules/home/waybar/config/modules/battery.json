@@ -1,0 +1,15 @@
+{
+    "battery": {
+        "states": {
+            "low": 20,
+            "medium": 40,
+            "high": 60,
+            "full": 80
+        },
+        "interval": 10,
+        "tooltip-format": "{timeTo}\n\nConsuming:\t{power:.2f} W\n\nCharge cycles:\t{cycles}\n\nBattery health:\t{health}%",
+        "format": "{icon}  {capacity}%",
+        "format-time": "{H}:{m}",
+        "format-icons": ["", "", "", ""]
+    }
+}

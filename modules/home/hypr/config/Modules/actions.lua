@@ -1,0 +1,23 @@
+terminal	= "foot"
+fileManager	= "thunar"
+menu		= "rofi -show drun"
+browser		= "firefox"
+discord		= "vesktop --enable-blink-features=MiddleClickAutoscroll"
+steam		= "steam"
+prism_launcher	= "prismlauncher"
+obsidian	= "obsidian"
+telegram	= "Telegram"
+spotify		= "spotify-launcher"
+calculator	= terminal .. " -e bc -lq"
+
+clipboardHistory	= "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
+emojiSelector		= "rofi -modi emoji -show emoji -emoji-mode copy"
+hyprpicker		= "hyprpicker -a -f hex -l"
+
+screenshotSelection		= "grim -g \"$(slurp -d)\" - | wl-copy"
+screenshotSelectionSwappy	= "grim -g \"$(slurp -d)\" - | swappy -f - | wl-copy"
+screenshotFullscreen		= "grim - | wl-copy"
+screenshotFullscreenSwappy	= "grim - | swappy -f - "
+
+recordSelection			= "wf-recorder -g \"$(slurp)\" -c hevc_nvenc -p rc=constqp -p qp=19 -B 120 -p preset=p4 --audio=alsa_output.pci-0000_00_1f.3.analog-stereo.monitor -f $(mktemp -u ~/Media/Videos/ScreenRecordings/XXXXXXXXX.mp4)"
+recordStop			= "killall -s SIGINT wf-recorder"

@@ -1,0 +1,46 @@
+{
+	"layer": "top",
+	"position": "top",
+	"margin-top": 12,
+	"margin-left": 12,
+	"margin-right": 12,
+	"margin-bottom": 0,
+	"height": 34,
+	"spacing": 6,
+	"include": [
+		"~/.config/waybar/modules/clock.json",
+		"~/.config/waybar/modules/battery.json",
+		"~/.config/waybar/modules/bluetooth.json",
+		"~/.config/waybar/modules/hyprland.json",
+		"~/.config/waybar/modules/memory.json",
+		"~/.config/waybar/modules/sound.json",
+		"~/.config/waybar/modules/network.json",
+		"~/.config/waybar/modules/tray.json",
+		"~/.config/waybar/modules/gpu.json",
+		"~/.config/waybar/modules/cpu.json"
+	],
+	"modules-left": [
+		"cpu",
+		"custom/gpu",
+		"custom/memory",
+		"network"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"hyprland/window",
+		"tray",
+		"bluetooth",
+		"pulseaudio",
+		"battery",
+		"hyprland/language",
+		"clock",
+		"custom/power"
+	],
+	"custom/power": {
+		"format": "⏻",
+		"tooltip": false,
+		"on-click": "~/.config/waybar/power-menu.sh"
+	}
+}
