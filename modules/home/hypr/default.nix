@@ -15,5 +15,9 @@
 		wl-clipboard
 		cliphist
 	];
+	xdg.portal.config.common.default = [
+		"hyprland"
+		"gtk"
+	];
 	xdg.configFile."hypr".source = ./config;
 }

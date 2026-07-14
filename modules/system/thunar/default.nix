@@ -8,6 +8,10 @@
 			thunar-media-tags-plugin
 		];
 	};
+	services.gvfs.enable = true;
+	programs.dconf.enable = true;
+	programs.xfconf.enable = true;
+	services.tumbler.enable = true;
 	environment.systemPackages = with pkgs; [
 		file-roller
 		p7zip

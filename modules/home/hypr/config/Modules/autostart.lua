@@ -6,6 +6,7 @@ hl.on("hyprland.start", function ()
 	
 	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("waybar")
+	hl.exec_cmd(fileManager .. " --daemon")
 
 	hl.exec_cmd(browser, { workspace = "1 silent" })
 	hl.exec_cmd(steam .. " -silent", { workspace = "2 silent" })
