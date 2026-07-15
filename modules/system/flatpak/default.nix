@@ -1,0 +1,14 @@
+{ config, pkgs, ... }:
+{
+	services.flatpak = {
+		enable = true;
+		remotes = [{
+			name = "flathub";
+			location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+		}];
+		update.onActivation = true;
+		packages = [
+			"org.vinegarhq.Sober"
+		];
+	};
+}

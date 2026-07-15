@@ -39,8 +39,8 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "pavucontrol-menu",
-	match = { class = "org.pulseaudio.pavucontrol" },
+	name = "pwvucontrol-menu",
+	match = { class = "com.saivert.pwvucontrol" },
 	
 	float = true,
 	pin = true,

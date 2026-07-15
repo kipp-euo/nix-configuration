@@ -5,7 +5,7 @@
 		gtk.enable = true;
 		name = "Bibata-Modern-Ice";
 		package = pkgs.bibata-cursors;
-		size = 18;
+		size = 22;
 	};
 	gtk = {
 		enable = true;

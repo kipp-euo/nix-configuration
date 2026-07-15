@@ -4,7 +4,7 @@
 		enable = true;
 		historyControl = [ "ignoredups" "erasedups" ];
 		initExtra = ''
-			PS1="\[\e[35m\][\u@\H \w]\$ \[\e[m\]"
+			PS1="\[\e[35m\][\u@\h \w]\$ \[\e[m\]"
 		'';
 	};
 }

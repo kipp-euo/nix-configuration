@@ -38,9 +38,4 @@
 		"clock",
 		"custom/power"
 	],
-	"custom/power": {
-		"format": "⏻",
-		"tooltip": false,
-		"on-click": "~/.config/waybar/power-menu.sh"
-	}
 }

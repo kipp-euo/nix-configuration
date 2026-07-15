@@ -3,9 +3,13 @@
 	imports = [
 		./hardware-configuration.nix
 
+		../../modules/system/audio
 		../../modules/system/hypr
+		../../modules/system/bluetooth
 		../../modules/system/thunar
 		../../modules/system/steam
+		../../modules/system/flatpak
+		../../modules/system/vpn
 	];
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
@@ -64,14 +68,12 @@
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
 
-	services.flatpak.enable = true;
 	programs.git.enable = true;
 
 	# List packages installed in system profile.
 	environment.systemPackages = with pkgs; [
 		wget
 		curl
-		git
 		neovim
 		man-db
 	];

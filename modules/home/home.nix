@@ -14,6 +14,7 @@
 		./prismlauncher
 		./qt
 		./rofi
+		./sober
 		./swayimg
 		./thunar
 		./vesktop
