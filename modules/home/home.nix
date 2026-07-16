@@ -27,6 +27,7 @@
 		stateVersion = "26.05"; 
 		packages = with pkgs; [
 			kdePackages.kolourpaint
+			bc
 		];
 	};
 }

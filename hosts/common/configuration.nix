@@ -4,39 +4,31 @@
 		./hardware-configuration.nix
 
 		../../modules/system/audio
-		../../modules/system/hypr
 		../../modules/system/bluetooth
-		../../modules/system/thunar
-		../../modules/system/steam
+		../../modules/system/bootloader/systemd-boot
 		../../modules/system/flatpak
+		../../modules/system/fonts
+		../../modules/system/git
+		../../modules/system/hypr
+		../../modules/system/ly
+		../../modules/system/nix
+		../../modules/system/steam
+		../../modules/system/thunar
 		../../modules/system/vpn
 	];
-	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-	# Bootloader.
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-
 	# Use latest kernel.
-	boot.kernelPackages = pkgs.linuxPackages_latest;
+	boot.kernelPackages = pkgs.linuxPackages_zen;
 
 	networking.hostName = "laptop"; # Define your hostname.
-	# networking.wireless.enable = true;	# Enables wireless support via wpa_supplicant.
-
-	# Configure network proxy if necessary
-	# networking.proxy.default = "http://user:password@proxy:port/";
-	# networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
 	# Enable networking
 	networking.networkmanager.enable = true;
 
-	# Set your time zone.
 	time.timeZone = "Asia/Vladivostok";
 
-	# Select internationalisation properties.
 	i18n.defaultLocale = "ru_RU.UTF-8";
-
 	i18n.extraLocaleSettings = {
 		LC_ADDRESS = "ru_RU.UTF-8";
 		LC_IDENTIFICATION = "ru_RU.UTF-8";
@@ -68,28 +60,14 @@
 	# Allow unfree packages
 	nixpkgs.config.allowUnfree = true;
 
-	programs.git.enable = true;
-
-	# List packages installed in system profile.
 	environment.systemPackages = with pkgs; [
 		wget
+		git
 		curl
 		neovim
 		man-db
 	];
-	fonts.packages = with pkgs; [
-		noto-fonts
-		noto-fonts-cjk-sans
-		noto-fonts-color-emoji
-		liberation_ttf
-		nerd-fonts.jetbrains-mono
-	];
 
-	nix.gc = {
-		automatic = true;
-		dates = "daily";
-		options = "--delete-older-than 7d";
-	};
 
 	# Some programs need SUID wrappers, can be configured further or are
 	# started in user sessions.
@@ -117,5 +95,4 @@
 	# Before changing this value read the documentation for this option
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 	system.stateVersion = "26.05"; # Did you read the comment?
-
 }

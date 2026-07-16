@@ -13,6 +13,7 @@ return {
 		vim.lsp.enable('jsonls')
 		vim.lsp.enable('systemd_ls')
 		vim.lsp.enable('texlab')
+		vim.lsp.enable('nixd')
 
 
 		vim.lsp.config('lua_ls', { settings = {
