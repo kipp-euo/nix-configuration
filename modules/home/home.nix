@@ -28,6 +28,7 @@
 		packages = with pkgs; [
 			kdePackages.kolourpaint
 			bc
+			libjxl
 		];
 	};
 }

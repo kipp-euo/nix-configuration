@@ -3,23 +3,26 @@
 	imports = [
 		./hardware-configuration.nix
 
+		../../modules/system/appimage-run
 		../../modules/system/audio
 		../../modules/system/bluetooth
 		../../modules/system/bootloader/systemd-boot
+		../../modules/system/btrfs
+		../../modules/system/firewall
 		../../modules/system/flatpak
 		../../modules/system/fonts
 		../../modules/system/git
 		../../modules/system/hypr
+		../../modules/system/kernel
 		../../modules/system/ly
 		../../modules/system/nix
 		../../modules/system/steam
+		../../modules/system/swap
 		../../modules/system/thunar
 		../../modules/system/vpn
 	];
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-	# Use latest kernel.
-	boot.kernelPackages = pkgs.linuxPackages_zen;
 
 	networking.hostName = "laptop"; # Define your hostname.
 
@@ -81,12 +84,6 @@
 
 	# Enable the OpenSSH daemon.
 	# services.openssh.enable = true;
-
-	# Open ports in the firewall.
-	# networking.firewall.allowedTCPPorts = [ ... ];
-	# networking.firewall.allowedUDPPorts = [ ... ];
-	# Or disable the firewall altogether.
-	# networking.firewall.enable = false;
 
 	# This value determines the NixOS release from which the default
 	# settings for stateful data, like file locations and database versions

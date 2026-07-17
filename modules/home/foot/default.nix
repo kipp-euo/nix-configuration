@@ -2,6 +2,39 @@
 {
 	programs.foot = {
 		enable = true;
+		settings = {
+			main = {
+				font="JetBrainsMono Nerd Font:size=11.5";
+				line-height = 13.8;
+				dpi-aware="no";
+				pad = "0x0";
+			};
+			scrollback = {
+				lines = 100;
+				multiplier = 1.0;
+			};
+			colors-dark = {
+				foreground = "1e1d35";
+				background = "F7F7FF";
+
+				regular0 = "1e1d35";
+				regular1 = "ff0060";
+				regular2 = "02b366";
+				regular3 = "ff6d33";
+				regular4 = "002288";
+				regular5 = "8000ff";
+				regular6 = "1fa6a6";
+				regular7 = "E9E9F3";
+
+				bright0 = "3a3858";
+				bright1 = "ff499e";
+				bright2 = "03ff92";
+				bright3 = "fcba03";
+				bright4 = "0044cc";
+				bright5 = "ddcfff";
+				bright6 = "24bfbf";
+				bright7 = "f7f7ff";
+			};
+		};
 	};
-	xdg.configFile."foot".source = ./config;
 }
