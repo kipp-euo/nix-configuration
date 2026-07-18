@@ -40,6 +40,7 @@ hl.config({
 	render = {
 		expand_undersized_textures = false,
 		new_render_scheduling = true,
+		direct_scanout = 1,
 	},
 })
 

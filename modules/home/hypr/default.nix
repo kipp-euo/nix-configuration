@@ -20,4 +20,5 @@
 		"gtk"
 	];
 	xdg.configFile."hypr".source = ./config;
+	# xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-configuration/modules/home/hypr/config";
 }

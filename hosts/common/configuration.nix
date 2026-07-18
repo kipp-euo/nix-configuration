@@ -14,7 +14,7 @@
 		../../modules/system/git
 		../../modules/system/hypr
 		../../modules/system/kernel
-		../../modules/system/ly
+		# ../../modules/system/ly
 		../../modules/system/nix
 		../../modules/system/steam
 		../../modules/system/swap

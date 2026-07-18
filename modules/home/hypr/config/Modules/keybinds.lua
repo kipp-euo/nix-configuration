@@ -45,6 +45,7 @@ hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + U", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(prism_launcher))
 hl.bind(mainMod .. " + G", hl.dsp.layout("togglesplit"))
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.tag({ tag = "game" }))
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 
 -- Move focus with mainMod + arrow keys

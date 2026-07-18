@@ -17,7 +17,7 @@
 		./sober
 		./swayimg
 		./thunar
-		./vesktop
+		# ./vesktop
 		./waybar
 	];
 	programs.home-manager.enable = true;

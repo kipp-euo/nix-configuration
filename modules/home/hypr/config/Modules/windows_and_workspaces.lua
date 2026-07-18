@@ -2,7 +2,7 @@ hl.window_rule({
 	name  = "suppress-maximize-events",
 	match = { class = ".*" },
 
-	suppress_event = "maximize",
+	suppress_event = "maximize fullscreen",
 })
 
 hl.window_rule({
@@ -41,7 +41,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "pwvucontrol-menu",
 	match = { class = "com.saivert.pwvucontrol" },
-	
+
 	float = true,
 	pin = true,
 	size = { "800", "300" },
@@ -49,19 +49,22 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "gamescope-window",
-	match = { class = "gamescope" },
+	name = "games",
+	match = {
+		tag = "game",
+	},
 
-	workspace = "empty silent",
 	immediate = true,
 	allows_input = true,
+	rounding = 0,
+	border_size = 0,
 	render_unfocused = false,
 	no_anim = true,
 	no_blur = true,
 	no_dim = true,
 	no_shadow = true,
+	opaque = true,
 	decorate = false,
-	content = "game",
 })
 
 hl.window_rule({
