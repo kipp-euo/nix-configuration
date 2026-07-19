@@ -1,8 +1,10 @@
 { config, pkgs, ... }:
 {
 	imports = [
+		# ./vesktop
 		./bash
 		./btop
+		./development
 		./fastfetch
 		./firefox
 		./foot
@@ -15,9 +17,9 @@
 		./qt
 		./rofi
 		./sober
+		./swappy
 		./swayimg
 		./thunar
-		# ./vesktop
 		./waybar
 	];
 	programs.home-manager.enable = true;

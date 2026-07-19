@@ -1,7 +1,7 @@
 {
 	"cpu": {
 	    "interval": 10,
-	    "format": "  {usage}% | {avg_frequency} GHz",
+	    "format": "  {usage}% | {avg_frequency} GHz",
 	    "tooltip": true,
 	    "min-length": 16
 	}

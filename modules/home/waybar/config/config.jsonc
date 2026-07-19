@@ -16,17 +16,17 @@
 		"~/.config/waybar/modules/sound.json",
 		"~/.config/waybar/modules/network.json",
 		"~/.config/waybar/modules/tray.json",
-		"~/.config/waybar/modules/gpu.json",
+		// "~/.config/waybar/modules/gpu.json",
 		"~/.config/waybar/modules/cpu.json"
 	],
 	"modules-left": [
 		"cpu",
-		"custom/gpu",
+		// "custom/gpu",
 		"custom/memory",
 		"network"
 	],
 	"modules-center": [
-		"hyprland/workspaces"
+		"ext/workspaces"
 	],
 	"modules-right": [
 		"hyprland/window",

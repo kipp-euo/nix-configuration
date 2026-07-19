@@ -23,7 +23,8 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(calculator, {
 -- Menus
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(clipboardHistory))
-hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_cmd(emojiSelector))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(emojiSelector))
+hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(nerdEmojiSelector))
 
 -- Killing programs
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
@@ -35,8 +36,6 @@ hl.bind("SHIFT + Print", hl.dsp.exec_cmd(screenshotFullscreenSwappy))
 hl.bind(mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelection))
 hl.bind("SHIFT + " .. mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelectionSwappy))
 
-hl.bind(mainMod .. " + Alt_L", hl.dsp.exec_cmd(recordStop))
-hl.bind(mainMod .. " + SHIFT + Alt_L", hl.dsp.exec_cmd(recordSelection))
 
 -- Rest
 hl.bind(mainMod .. " + I", hl.dsp.exec_cmd(hyprpicker))

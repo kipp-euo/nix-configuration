@@ -1,7 +1,12 @@
 {
 	"hyprland/workspaces": {
-		"format": "{icon}",
-		"on-click": "activate"
+		"format": "{icon}"
+	},
+	"ext/workspaces": {
+		"all-outputs": true,
+		"on-click": "activate",
+		"active-only": false,
+		"format": "{icon}"
 	},
 	"hyprland/language": {
 		"format": "{}",

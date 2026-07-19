@@ -3,6 +3,8 @@
 	imports = [
 		./hardware-configuration.nix
 
+		# ../../modules/system/gamescope
+		# ../../modules/system/ly
 		../../modules/system/appimage-run
 		../../modules/system/audio
 		../../modules/system/bluetooth
@@ -14,7 +16,6 @@
 		../../modules/system/git
 		../../modules/system/hypr
 		../../modules/system/kernel
-		# ../../modules/system/ly
 		../../modules/system/nix
 		../../modules/system/steam
 		../../modules/system/swap
@@ -64,11 +65,12 @@
 	nixpkgs.config.allowUnfree = true;
 
 	environment.systemPackages = with pkgs; [
-		wget
-		git
 		curl
-		neovim
+		gcc
+		git
 		man-db
+		neovim
+		wget
 	];
 
 

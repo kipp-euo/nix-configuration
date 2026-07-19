@@ -8,10 +8,7 @@
 	home.packages = with pkgs; [
 		hyprpaper
 		hyprpicker
-		grim
-		slurp
-		wf-recorder
-		swappy
+		grimblast
 		wl-clipboard
 		cliphist
 	];
@@ -20,5 +17,4 @@
 		"gtk"
 	];
 	xdg.configFile."hypr".source = ./config;
-	# xdg.configFile."hypr".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-configuration/modules/home/hypr/config";
 }
