@@ -9,6 +9,7 @@ obsidian	= "obsidian"
 telegram	= "Telegram"
 spotify		= "spotify-launcher"
 calculator	= terminal .. " -e bc -lq"
+resourceMonitor	= terminal .. " -e btop"
 
 clipboardHistory	= "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 emojiSelector		= "rofi -modi emoji -show emoji -emoji-mode copy"

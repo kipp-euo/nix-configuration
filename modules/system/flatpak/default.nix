@@ -7,8 +7,5 @@
 			location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
 		}];
 		update.onActivation = true;
-		packages = [
-			"org.vinegarhq.Sober"
-		];
 	};
 }

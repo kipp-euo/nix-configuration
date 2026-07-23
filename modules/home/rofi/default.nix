@@ -22,7 +22,6 @@
 			case-sensitive = false;
 			sidebar-mode = true;
 			hover-select = true;
-			matching = "fuzzy";
 			tokenize = true;
 			scroll-method = 0;
 			window-thumbnail = true;

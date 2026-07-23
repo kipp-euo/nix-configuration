@@ -6,6 +6,11 @@
 		VISUAL = "nvim";
 		MANPAGER = "nvim +Man!";
 	};
+	xdg.mimeApps.defaultApplications."text/plain" = [ "nvim.desktop" ];
+	home.shellAliases = {
+		vi = "nvim";
+		vim = "nvim";
+	};
 	home.packages = with pkgs; [
 		neovim
 		

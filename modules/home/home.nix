@@ -2,6 +2,7 @@
 {
 	imports = [
 		# ./vesktop
+		# ./mime
 		./bash
 		./btop
 		./development
@@ -10,6 +11,7 @@
 		./foot
 		./gtk
 		./hypr
+		./libreoffice
 		./mako
 		./mpv
 		./nvim
@@ -29,6 +31,8 @@
 		stateVersion = "26.05"; 
 		packages = with pkgs; [
 			kdePackages.kolourpaint
+			audacious
+			audacity
 			bc
 			libjxl
 		];

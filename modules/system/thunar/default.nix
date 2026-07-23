@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+	# TODO: Put more configuration in here
 	programs.thunar = {
 		enable = true;
 		plugins = with pkgs; [

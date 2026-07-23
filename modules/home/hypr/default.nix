@@ -11,6 +11,8 @@
 		grimblast
 		wl-clipboard
 		cliphist
+		brightnessctl
+		playerctl
 	];
 	xdg.portal.config.common.default = [
 		"hyprland"

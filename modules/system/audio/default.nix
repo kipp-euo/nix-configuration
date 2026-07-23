@@ -1,18 +1,16 @@
 { config, pkgs, ... }:
 {
-	services.pulseaudio.enable = false; # Use Pipewire, the modern sound subsystem
+	# TODO: Filters for audio input
 
-	security.rtkit.enable = true; # Enable RealtimeKit for audio purposes
-
+	services.pulseaudio.enable = false;
+	security.rtkit.enable = true;
 	services.pipewire = {
 		enable = true;
 		alsa.enable = true;
 		alsa.support32Bit = true;
 		pulse.enable = true;
-		# Uncomment the following line if you want to use JACK applications
-		# jack.enable = true;
 	};
 	environment.systemPackages = with pkgs; [
-		pwvucontrol
+		pwvucontrol # Pipewire audio panel for waybar
 	];
 }

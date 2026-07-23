@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+	# TODO: Color scheme
 	programs.btop = {
 		enable = true;
 		settings = {

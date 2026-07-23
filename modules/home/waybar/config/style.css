@@ -87,20 +87,13 @@ button:hover {
 }
 
 #tray {
-	background-color: #1E1D35;
-	color: #f7f7ff;
+	color: #1E1D35;
+	background-color: #f7f7ff;
+	border: 1px solid #1E1D35;
 	padding: 0 10px 0 10px;
-}
-
-#tray > .passive {
-	-gtk-icon-effect: dim;
 }
 
 #tray > .needs-attention {
 	-gtk-icon-effect: highlight;
 	background-color: #eb4d4b;
-}
-
-#custom-power {
-	padding: 0 12px 0 10px;
 }

@@ -18,6 +18,7 @@
 		../../modules/system/kernel
 		../../modules/system/nix
 		../../modules/system/steam
+		../../modules/system/sober
 		../../modules/system/swap
 		../../modules/system/thunar
 		../../modules/system/vpn
@@ -25,7 +26,7 @@
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
-	networking.hostName = "laptop"; # Define your hostname.
+	networking.hostName = "laptop";
 
 	# Enable networking
 	networking.networkmanager.enable = true;
@@ -58,7 +59,6 @@
 		isNormalUser = true;
 		description = "Kipp";
 		extraGroups = [ "networkmanager" "wheel" ];
-		packages = with pkgs; [];
 	};
 
 	# Allow unfree packages
