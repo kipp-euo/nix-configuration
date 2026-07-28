@@ -1,13 +1,14 @@
 { config, pkgs, ... }:
 {
 	imports = [
-		# ./vesktop
 		# ./mime
+		# ./vesktop
 		./bash
 		./btop
 		./development
 		./fastfetch
 		./firefox
+		./fonts
 		./foot
 		./gtk
 		./hypr

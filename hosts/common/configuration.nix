@@ -10,9 +10,9 @@
 		../../modules/system/bluetooth
 		../../modules/system/bootloader/systemd-boot
 		../../modules/system/btrfs
+		../../modules/system/fonts
 		../../modules/system/firewall
 		../../modules/system/flatpak
-		../../modules/system/fonts
 		../../modules/system/git
 		../../modules/system/hypr
 		../../modules/system/kernel

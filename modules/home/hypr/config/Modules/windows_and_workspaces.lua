@@ -2,7 +2,8 @@ hl.window_rule({
 	name  = "suppress-maximize-events",
 	match = { class = ".*" },
 
-	suppress_event = "maximize fullscreen",
+	-- suppress_event = "maximize fullscreen",
+	suppress_event = "maximize",
 })
 
 hl.window_rule({

@@ -14,6 +14,7 @@ resourceMonitor	= terminal .. " -e btop"
 clipboardHistory	= "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 emojiSelector		= "rofi -modi emoji -show emoji -emoji-mode copy"
 nerdEmojiSelector	= "rofi -modi nerdy -show nerdy"
+zalgoText               = "~/NixOS-configuration/modules/home/rofi/zalgo.sh"
 hyprpicker		= "hyprpicker -a -f hex -l"
 
 screenshotSelection		= "grimblast -nf copy area"

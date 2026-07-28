@@ -22,5 +22,5 @@ vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
 
-vim.opt.spell = true
-vim.opt.spelllang = { "ru", "en" }
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { "ru", "en" }

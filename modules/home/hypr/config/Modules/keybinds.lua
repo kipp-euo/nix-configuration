@@ -26,9 +26,10 @@ hl.bind(mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelection))
 hl.bind("SHIFT + " .. mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelectionSwappy))
 
 
--- Menus
+-- Dmenu
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(clipboardHistory))
+hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_raw(zalgoText))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(emojiSelector))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(nerdEmojiSelector))
 

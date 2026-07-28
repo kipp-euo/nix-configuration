@@ -1,1 +1,1 @@
--- Cursor
+hl.env("PROTON_ENABLE_WAYLAND", 1)
