@@ -8,10 +8,10 @@
 		./development
 		./fastfetch
 		./firefox
-		./fonts
 		./foot
 		./gtk
 		./hypr
+		./fonts
 		./libreoffice
 		./mako
 		./mpv
