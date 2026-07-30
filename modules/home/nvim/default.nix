@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
-	xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/NixOS-configuration/modules/home/nvim/config";
+	xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-configuration/modules/home/nvim/config";
 	home.sessionVariables = {
 		EDITOR = "nvim";
 		VISUAL = "nvim";

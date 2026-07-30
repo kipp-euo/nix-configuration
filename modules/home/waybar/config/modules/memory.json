@@ -1,7 +1,7 @@
 {
     "custom/memory": {
         "interval": 10,
-	"exec": "~/NixOS-configuration/modules/home/waybar/config/memory.sh",
+	"exec": "~/nix-configuration/modules/home/waybar/config/memory.sh",
         "format": "  {}",
 	"tooltip": false,
 	"min-length": 16
