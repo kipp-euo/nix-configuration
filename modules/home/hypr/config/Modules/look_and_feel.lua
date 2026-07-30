@@ -14,7 +14,7 @@ hl.config({
 			},
 		},
 		resize_on_border = false,
-		allow_tearing = true,
+		allow_tearing = false,
 		layout = "dwindle",
 	},
 

@@ -11,6 +11,7 @@ hl.on("hyprland.start", function ()
 
 	hl.exec_cmd(browser, { workspace = "1 silent" })
 	hl.exec_cmd(steam .. " -silent", { workspace = "2 silent" })
+	hl.exec_cmd("gpu-screen-recorder-gtk", { workspace = "2 silent" })
 	hl.exec_cmd(discord, { workspace = "2 silent" })
 	hl.exec_cmd(spotify, { workspace = "1 silent" })
 end)

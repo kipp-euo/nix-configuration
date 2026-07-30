@@ -15,6 +15,7 @@
 		../../modules/system/flatpak
 		../../modules/system/git
 		../../modules/system/hypr
+		../../modules/system/gamemode
 		../../modules/system/kernel
 		../../modules/system/nix
 		../../modules/system/steam
@@ -22,6 +23,7 @@
 		../../modules/system/swap
 		../../modules/system/thunar
 		../../modules/system/vpn
+		../../modules/system/gpuScreenRecorder
 	];
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 

@@ -9,11 +9,12 @@
 			thunar-media-tags-plugin
 		];
 	};
+	services.tumbler.enable = true;
 	services.gvfs.enable = true;
 	programs.dconf.enable = true;
 	programs.xfconf.enable = true;
-	services.tumbler.enable = true;
 	environment.systemPackages = with pkgs; [
+		# xarchiver
 		file-roller
 		p7zip
 		unzip

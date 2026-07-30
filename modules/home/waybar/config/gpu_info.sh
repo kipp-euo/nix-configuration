@@ -6,7 +6,7 @@ else
 	UTIL=$(echo "$GPU_INFO" | awk -F',' '{print $1}')
 	FREQ=$(echo "$GPU_INFO" | awk -F',' '{print $2}')
 fi
+TEXT="$UTIL% | $FREQ MHz"
 
-
-echo "$UTIL% | $FREQ MHz"
+echo "$TEXT"
 

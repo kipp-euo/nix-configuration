@@ -2,7 +2,7 @@
 {
 	swapDevices = [{ 
 		device = "/swap/swapfile"; 
-		size = 4*1024; # Creates an 8GB swap file 
+		size = 4*1024;
 	}];
 	zramSwap = {
 		enable = true;
@@ -12,6 +12,6 @@
 		priority = 100;
 	};
 	boot.kernel.sysctl = {
-		"vm.swappiness" = 10;
+		"vm.swappiness" = 100;
 	};
 }

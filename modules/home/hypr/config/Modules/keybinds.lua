@@ -1,19 +1,20 @@
 local mainMod = "SUPER"
+local mainModShift = "SUPER + SHIFT"
 
 
 -- Terminal
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(terminal))
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd(terminal, {
+hl.bind(mainModShift .. " + E", hl.dsp.exec_cmd(terminal, {
 	float = true, pin = true,
 	move = { "cursor_x-600*0.5", "cursor_y-30" },
 	size = { "600", "400" },
 }))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(calculator, {
-	float = true, 
+	float = true,
 	move = { "cursor_x-300*0.5", "cursor_y-400*0.5" },
 	size = { "300", "400" },
 }))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(resourceMonitor))
+hl.bind(mainModShift .. " + B", hl.dsp.exec_cmd(resourceMonitor))
 
 
 -- Screen capture
@@ -29,14 +30,14 @@ hl.bind("SHIFT + " .. mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelec
 -- Dmenu
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(clipboardHistory))
-hl.bind(mainMod .. " + SHIFT + Z", hl.dsp.exec_raw(zalgoText))
+hl.bind(mainModShift .. " + Z", hl.dsp.exec_raw(zalgoText))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(emojiSelector))
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd(nerdEmojiSelector))
+hl.bind(mainModShift .. " + R", hl.dsp.exec_cmd(nerdEmojiSelector))
 
 
 -- Apps
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(steam))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(spotify))
+hl.bind(mainModShift .. " + S", hl.dsp.exec_cmd(spotify))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(discord))
@@ -47,22 +48,49 @@ hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(prism_launcher))
 
 -- Killing programs
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + C", hl.dsp.window.kill())
+hl.bind(mainModShift .. " + C", hl.dsp.window.kill())
 
 
 -- Rest
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.tag({ tag = "game" }))
+hl.bind(mainModShift .. " + F", function ()
+	local focused_window = hl.get_active_window()
+	if focused_window == nil then
+		return
+	end
+	local focused_pid = focused_window.pid
+
+	local handle = io.popen("gamemoded --status=" .. focused_pid, "r")
+	local gamemode_status = handle:read("*l")
+	handle:close()
+
+	local gamemode_enabled = string.find(gamemode_status, "gamemode is active and [" .. focused_pid .. "] registered", 1, true) ~= nil
+
+	local has_game_tag = false
+	if focused_window.tags ~= nil then
+		for _, tag in ipairs(focused_window.tags) do
+			if tag == "game" then
+				has_game_tag = true
+				break
+			end
+		end
+	end
+	-- Prevents desync
+	if gamemode_enabled == has_game_tag then
+		hl.exec_cmd("gamemoded --request=" .. focused_pid)
+	end
+	hl.dispatch(hl.dsp.window.tag({ tag = "game" }))
+end)
 
 hl.bind(mainMod .. " + G", hl.dsp.layout("togglesplit"))
-hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.pseudo())
+hl.bind(mainModShift .. " + G", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 
 -- Move focus with mainMod + arrow keys
-hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.resize({ x = -20, y = 0, relative = true}),{ repeating = true })
-hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.resize({ x = 20, y = 0, relative = true}),{ repeating = true })
-hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.resize({ x = 0, y = -20, relative = true}),{ repeating = true })
-hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.resize({ x = 0, y = 20, relative = true}),{ repeating = true })
+hl.bind(mainModShift .. " + H", hl.dsp.window.resize({ x = -20, y = 0, relative = true}),{ repeating = true })
+hl.bind(mainModShift .. " + L", hl.dsp.window.resize({ x = 20, y = 0, relative = true}),{ repeating = true })
+hl.bind(mainModShift .. " + K", hl.dsp.window.resize({ x = 0, y = -20, relative = true}),{ repeating = true })
+hl.bind(mainModShift .. " + J", hl.dsp.window.resize({ x = 0, y = 20, relative = true}),{ repeating = true })
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -79,7 +107,7 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
 	hl.bind(mainMod .. " + " .. key,			 hl.dsp.focus({ workspace = i}))
-	hl.bind(mainMod .. " + SHIFT + " .. key,	 hl.dsp.window.move({ workspace = i }))
+	hl.bind(mainModShift .. " + " .. key,	 hl.dsp.window.move({ workspace = i }))
 end
 
 -- Scroll through existing workspaces with mainMod + scroll
