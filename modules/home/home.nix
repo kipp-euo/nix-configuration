@@ -35,6 +35,7 @@
 			audacious
 			audacity
 			bc
+			tree
 			libjxl
 		];
 	};

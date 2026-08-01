@@ -1,10 +1,13 @@
 { config, pkgs, ... }:
+let
+	mount_options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
+in
 {
 	fileSystems = {
-		"/".options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
-		"/home".options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
-		"/nix".options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
-		"/swap".options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
+		"/".options = mount_options;
+		"/home".options = mount_options;
+		"/nix".options = mount_options;
+		"/swap".options = mount_options;
 	};
 	services.btrfs.autoScrub = {
 		enable = true;
