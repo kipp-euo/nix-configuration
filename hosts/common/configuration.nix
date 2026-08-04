@@ -2,29 +2,7 @@
 {
 	imports = [
 		./hardware-configuration.nix
-
-		# ../../modules/system/gamescope
-		../../modules/system/appimage-run
-		../../modules/system/audio
-		../../modules/system/bluetooth
-		../../modules/system/bootloader/systemd-boot
-		../../modules/system/btrfs
-		../../modules/system/fonts
-		../../modules/system/firewall
-		../../modules/system/flatpak
-		../../modules/system/git
-		../../modules/system/hypr
-		../../modules/system/ntfs
-		../../modules/system/gamemode
-		../../modules/system/kernel
-		../../modules/system/nix
-		../../modules/system/steam
-		../../modules/system/sober
-		../../modules/system/swap
-		../../modules/system/nvidia
-		../../modules/system/thunar
-		../../modules/system/vpn
-		../../modules/system/gpuScreenRecorder
+		../../modules/system/system.nix
 	];
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
@@ -48,7 +26,6 @@
 		LC_TELEPHONE = "ru_RU.UTF-8";
 		LC_TIME = "ru_RU.UTF-8";
 	};
-	console.font = "cyr-sun16";
 
 	# Configure keymap in X11
 	services.xserver.xkb = {

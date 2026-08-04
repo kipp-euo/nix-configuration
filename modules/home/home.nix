@@ -2,7 +2,7 @@
 {
 	imports = [
 		# ./mime
-		# ./vesktop
+		./vesktop
 		./bash
 		./btop
 		./development
