@@ -11,6 +11,7 @@
 	};
 	services.tumbler.enable = true;
 	services.gvfs.enable = true;
+	services.udisks2.enable = true;
 	programs.dconf.enable = true;
 	programs.xfconf.enable = true;
 	environment.systemPackages = with pkgs; [

@@ -8,42 +8,54 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "rtsx_usb_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/050fc1e8-75d8-4cad-ab1c-2f4af25a2ffd";
+    { device = "/dev/disk/by-uuid/474204c4-1184-4d34-8ae5-5cba5ada6817";
       fsType = "btrfs";
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/050fc1e8-75d8-4cad-ab1c-2f4af25a2ffd";
+    { device = "/dev/disk/by-uuid/474204c4-1184-4d34-8ae5-5cba5ada6817";
       fsType = "btrfs";
       options = [ "subvol=nix" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/050fc1e8-75d8-4cad-ab1c-2f4af25a2ffd";
+    { device = "/dev/disk/by-uuid/474204c4-1184-4d34-8ae5-5cba5ada6817";
       fsType = "btrfs";
       options = [ "subvol=home" ];
     };
 
+  fileSystems."/swap" =
+    { device = "/dev/disk/by-uuid/474204c4-1184-4d34-8ae5-5cba5ada6817";
+      fsType = "btrfs";
+      options = [ "subvol=swap" ];
+    };
+
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/7148-090C";
+    { device = "/dev/disk/by-uuid/9415-811F";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/swap" =
-    { device = "/dev/disk/by-uuid/050fc1e8-75d8-4cad-ab1c-2f4af25a2ffd";
+  fileSystems."/home/kipp/.local/share/SteamHDD" =
+    { device = "/dev/disk/by-uuid/d7b2ff18-15c7-4d19-8b06-540085a7a76b";
       fsType = "btrfs";
-      options = [ "subvol=swap" ];
+      options = [ "subvol=steam" ];
+    };
+
+  fileSystems."/home/kipp/Storage" =
+    { device = "/dev/disk/by-uuid/d7b2ff18-15c7-4d19-8b06-540085a7a76b";
+      fsType = "btrfs";
+      options = [ "subvol=storage" ];
     };
 
   swapDevices = [ ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }

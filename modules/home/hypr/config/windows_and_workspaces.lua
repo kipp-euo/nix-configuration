@@ -104,8 +104,18 @@ hl.window_rule({
 	pin = true,
 })
 
-hl.layer_rule({
-	name      = "no-anim-for-selection",
-	match     = { namespace = "selection" },
-	no_anim   = true,
+hl.window_rule({
+	name   = "steam-pin-notifications",
+	match  = {
+		class = "steam",
+		title = "notificationtoasts_.*_desktop"
+	},
+	pin = true,
 })
+
+hl.layer_rule({
+	name    = "no-anim-for-selection",
+	match   = { namespace = "selection" },
+	no_anim = true,
+})
+

@@ -1,5 +1,11 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
+	fileSystems."/swap".options = [
+		"compress=zstd:3"
+		"space_cache=v2"
+		"discard=async"
+		"noatime"
+	];
 	swapDevices = [{ 
 		device = "/swap/swapfile"; 
 		size = 4*1024;

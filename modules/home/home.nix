@@ -11,6 +11,7 @@
 		./foot
 		./gtk
 		./hypr
+		./hyprpaper
 		./fonts
 		./libreoffice
 		./mako

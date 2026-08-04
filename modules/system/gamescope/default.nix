@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 let
 	gamescope-wrapped = pkgs.writeShellScriptBin "gamescope-wrapped" ''
 export XKB_DEFAULT_LAYOUT="us,ru"

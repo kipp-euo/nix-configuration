@@ -4,7 +4,6 @@
 		./hardware-configuration.nix
 
 		# ../../modules/system/gamescope
-		# ../../modules/system/ly
 		../../modules/system/appimage-run
 		../../modules/system/audio
 		../../modules/system/bluetooth
@@ -15,12 +14,14 @@
 		../../modules/system/flatpak
 		../../modules/system/git
 		../../modules/system/hypr
+		../../modules/system/ntfs
 		../../modules/system/gamemode
 		../../modules/system/kernel
 		../../modules/system/nix
 		../../modules/system/steam
 		../../modules/system/sober
 		../../modules/system/swap
+		../../modules/system/nvidia
 		../../modules/system/thunar
 		../../modules/system/vpn
 		../../modules/system/gpuScreenRecorder
@@ -28,12 +29,12 @@
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
-	networking.hostName = "laptop";
+	networking.hostName = "pcbg";
 
 	# Enable networking
 	networking.networkmanager.enable = true;
 
-	time.timeZone = "Asia/Vladivostok";
+	time.timeZone = "Europe/Moscow";
 
 	i18n.defaultLocale = "ru_RU.UTF-8";
 	i18n.extraLocaleSettings = {
