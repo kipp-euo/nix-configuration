@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
 	imports = [
 		# ./gamescope
@@ -11,6 +11,8 @@
 		./flatpak
 		./fonts
 		./gamemode
+		# ./zapret
+		./qbtorrent
 		./git
 		./gpuScreenRecorder
 		./hypr
@@ -20,8 +22,18 @@
 		./nvidia
 		./sober
 		./steam
+		./users
 		./swap
+		./locale
 		./thunar
-		./vpn
+		./timezone
+	];
+	nixpkgs.config.allowUnfree = true;
+	environment.systemPackages = with pkgs; [
+		curl
+		gcc
+		man-db
+		neovim
+		wget
 	];
 }

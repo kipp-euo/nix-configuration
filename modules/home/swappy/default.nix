@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
 	programs.swappy = {
 		enable = true;

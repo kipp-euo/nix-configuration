@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
 	# TODO: Create the desktop entry only if gamescope systemd module is active
 	xdg.desktopEntries = {

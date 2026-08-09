@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
 	# TODO: Color scheme
 	programs.btop = {

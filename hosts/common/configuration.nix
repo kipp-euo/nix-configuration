@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
 	imports = [
 		./hardware-configuration.nix
@@ -6,66 +6,15 @@
 	];
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-
 	networking.hostName = "pcbg";
-
-	# Enable networking
 	networking.networkmanager.enable = true;
-
-	time.timeZone = "Europe/Moscow";
-
-	i18n.defaultLocale = "ru_RU.UTF-8";
-	i18n.extraLocaleSettings = {
-		LC_ADDRESS = "ru_RU.UTF-8";
-		LC_IDENTIFICATION = "ru_RU.UTF-8";
-		LC_MEASUREMENT = "ru_RU.UTF-8";
-		LC_MONETARY = "ru_RU.UTF-8";
-		LC_NAME = "ru_RU.UTF-8";
-		LC_NUMERIC = "ru_RU.UTF-8";
-		LC_PAPER = "ru_RU.UTF-8";
-		LC_TELEPHONE = "ru_RU.UTF-8";
-		LC_TIME = "ru_RU.UTF-8";
-	};
 
 	# Configure keymap in X11
 	services.xserver.xkb = {
 		layout = "us,ru";
-		options = "grp:alt_shift_toggle";
+		options = "grp:caps_toggle";
 		variant = "";
 	};
-
-	# Define a user account. Don't forget to set a password with ‘passwd’.
-	users.users."kipp" = {
-		isNormalUser = true;
-		description = "Kipp";
-		extraGroups = [ "networkmanager" "wheel" ];
-	};
-
-	# Allow unfree packages
-	nixpkgs.config.allowUnfree = true;
-
-	environment.systemPackages = with pkgs; [
-		curl
-		gcc
-		git
-		man-db
-		neovim
-		wget
-	];
-
-
-	# Some programs need SUID wrappers, can be configured further or are
-	# started in user sessions.
-	# programs.mtr.enable = true;
-	# programs.gnupg.agent = {
-	#	 enable = true;
-	#	 enableSSHSupport = true;
-	# };
-
-	# List services that you want to enable:
-
-	# Enable the OpenSSH daemon.
-	# services.openssh.enable = true;
 
 	# This value determines the NixOS release from which the default
 	# settings for stateful data, like file locations and database versions

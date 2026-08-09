@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
 	# TODO: Migrate config
 	programs.swayimg = {

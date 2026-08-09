@@ -38,6 +38,7 @@
 			bc
 			tree
 			libjxl
+			davinci-resolve
 		];
 	};
 }
