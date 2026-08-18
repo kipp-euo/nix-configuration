@@ -1,3 +1,4 @@
-{ ... }: {
+{ ... }:
+{
 	xdg.mimeApps.enable = true;
 }

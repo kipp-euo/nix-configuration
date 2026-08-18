@@ -72,7 +72,6 @@ swayimg.gallery.enable_hover(true)                  -- enable mouse following
 swayimg.gallery.limit_cache(100)                    -- number of thumbnails stored in memory
 swayimg.gallery.enable_embedded_thumb(true)         -- use embedded thumbnails
 swayimg.gallery.enable_preload(false)               -- preloading invisible thumbnails
-swayimg.gallery.enable_pstore(false)                -- enable persistent storage for thumbnails
 
 --
 -- Other configuration examples

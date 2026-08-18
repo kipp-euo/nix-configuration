@@ -18,7 +18,6 @@
 		"hyprland"
 		"gtk"
 	];
-	# xdg.configFile."hypr".source = ./config;
 	wayland.windowManager.hyprland.extraConfig = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
 		(builtins.readFile ./config/actions.lua)
 		(builtins.readFile ./config/animations.lua)

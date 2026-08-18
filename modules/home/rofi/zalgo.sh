@@ -11,6 +11,9 @@ zalgo() {
 	for (( i=0; i<${#IN}; i++ )); do
 		OUT+="${IN:i:1}"
 		OUT+="${CHARS[((RANDOM%${#CHARS[@]}))]}"
+		OUT+="${CHARS[((RANDOM%${#CHARS[@]}))]}"
+		OUT+="${CHARS[((RANDOM%${#CHARS[@]}))]}"
+		OUT+="${CHARS[((RANDOM%${#CHARS[@]}))]}"
 	done
 	echo "$OUT"
 }

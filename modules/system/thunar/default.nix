@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
 	# TODO: Put more configuration in here
+	# TODO: Make xarchiver work
 	programs.thunar = {
 		enable = true;
 		plugins = with pkgs; [

@@ -35,5 +35,7 @@
 		man-db
 		neovim
 		wget
+		ffmpeg
+		compsize
 	];
 }
