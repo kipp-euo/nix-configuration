@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 let
 	mount_options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
 in

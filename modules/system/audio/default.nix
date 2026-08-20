@@ -11,6 +11,6 @@
 		pulse.enable = true;
 	};
 	environment.systemPackages = with pkgs; [
-		pwvucontrol # Pipewire audio panel for waybar
+		pwvucontrol
 	];
 }
