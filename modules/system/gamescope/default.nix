@@ -1,53 +1,54 @@
 { pkgs, ... }:
+# TODO: Move to separate files
 let
-	gamescope-wrapped = pkgs.writeShellScriptBin "gamescope-wrapped" ''
+  gamescope-wrapped = pkgs.writeShellScriptBin "gamescope-wrapped" ''
 export XKB_DEFAULT_LAYOUT="us,ru"
 export XKB_DEFAULT_VARIANT=","
 export XKB_DEFAULT_OPTIONS="grp:alt_shift_toggle"
 exec ${pkgs.gamescope}/bin/gamescope \
-	--rt \
-	--immediate-flips \
-	-f \
-	-w 1920 \
-	-W 1920 \
-	-h 1080 \
-	-H 1080 \
-	--force-grab-cursor \
-	-- \
-	"$@"
+  --rt \
+  --immediate-flips \
+  -f \
+  -w 1920 \
+  -W 1920 \
+  -h 1080 \
+  -H 1080 \
+  --force-grab-cursor \
+  -- \
+  "$@"
 '';
-	gamescope-wrapped-steam = pkgs.writeShellScriptBin "gamescope-wrapped-steam" ''
+  gamescope-wrapped-steam = pkgs.writeShellScriptBin "gamescope-wrapped-steam" ''
 export XKB_DEFAULT_LAYOUT="us,ru"
 export XKB_DEFAULT_VARIANT=","
 export XKB_DEFAULT_OPTIONS="grp:alt_shift_toggle"
 LD_PRELOAD="" exec ${pkgs.gamescope}/bin/gamescope \
-	--rt \
-	--immediate-flips \
-	-f \
-	-w 1920 \
-	-W 1920 \
-	-h 1080 \
-	-H 1080 \
-	--force-grab-cursor \
-	-- \
-	env LD_PRELOAD="''${LD_PRELOAD:-}" \
-	"$@"
+  --rt \
+  --immediate-flips \
+  -f \
+  -w 1920 \
+  -W 1920 \
+  -h 1080 \
+  -H 1080 \
+  --force-grab-cursor \
+  -- \
+  env LD_PRELOAD="''${LD_PRELOAD:-}" \
+  "$@"
 '';
 in
 {
-	programs.gamescope = {
-		enable = true;
-		capSysNice = true;
-	};
-	programs.steam = {
-		extraPackages = with pkgs; [
-			gamescope
-			gamescope-wrapped
-			gamescope-wrapped-steam
-		];
-	};
-	environment.systemPackages = [
-		gamescope-wrapped
-		gamescope-wrapped-steam
-	];
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
+  programs.steam = {
+    extraPackages = with pkgs; [
+      gamescope
+      gamescope-wrapped
+      gamescope-wrapped-steam
+    ];
+  };
+  environment.systemPackages = [
+    gamescope-wrapped
+    gamescope-wrapped-steam
+  ];
 }

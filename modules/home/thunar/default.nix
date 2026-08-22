@@ -1,5 +1,5 @@
 { ... }:
 {
-	# TODO: More configuration
-	# xdg.configFile."Thunar".source = ./config;
+  # TODO: More configuration
+  # xdg.configFile."Thunar".source = ./config;
 }

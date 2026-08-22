@@ -4,12 +4,17 @@ vim.opt.relativenumber = true
 vim.opt.expandtab = false
 vim.opt.tabstop = 8
 vim.opt.shiftwidth = 8
+vim.opt.softtabstop = 8
 vim.opt.smartindent = true
+
 vim.opt.cursorline = true
 
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.termguicolors = true
+
+vim.opt.list = true;
+vim.opt.listchars = 'tab:» ,lead:·,trail:·'
 
 vim.opt.updatetime = 400
 vim.api.nvim_create_autocmd("CursorHold", {

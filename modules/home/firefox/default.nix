@@ -1,11 +1,11 @@
 { ... }:
 {
-	# TODO: More configuration
-	programs.firefox = {
-		enable = true;
-		languagePacks = [
-			"ru-RU"
-			"en-US"
-		];
-	};
+  # TODO: More configuration
+  programs.firefox = {
+    enable = true;
+    languagePacks = [
+      "ru-RU"
+      "en-US"
+    ];
+  };
 }

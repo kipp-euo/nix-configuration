@@ -1,7 +1,7 @@
 { ... }:
 {
-	imports = [
-		../common
-		./hardware-configuration.nix
-	];
+  imports = [
+    ../common
+    ./hardware-configuration.nix
+  ];
 }

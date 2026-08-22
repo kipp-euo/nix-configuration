@@ -1,11 +1,11 @@
 { ... }:
 {
-	services.flatpak = {
-		enable = true;
-		remotes = [{
-			name = "flathub";
-			location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-		}];
-		update.onActivation = true;
-	};
+  services.flatpak = {
+    enable = true;
+    remotes = [{
+      name = "flathub";
+      location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+    }];
+    update.onActivation = true;
+  };
 }

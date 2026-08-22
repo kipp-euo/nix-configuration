@@ -1,9 +1,9 @@
 { ... }:
 {
-	imports = [
-		../common
-		./hardware-configuration.nix
+  imports = [
+    ../common
+    ./hardware-configuration.nix
 
-		../../modules/system/nvidia
-	];
+    ../../modules/system/nvidia
+  ];
 }

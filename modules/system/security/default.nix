@@ -1,5 +1,5 @@
 { ... }:
 {
-	security.polkit.enable = true;
-	security.protectKernelImage = true;
+  security.polkit.enable = true;
+  security.protectKernelImage = true;
 }
