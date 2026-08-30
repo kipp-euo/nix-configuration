@@ -6,8 +6,6 @@ discord		= "vesktop"
 steam		= "steam"
 prism_launcher	= "prismlauncher"
 obsidian	= "obsidian"
-telegram	= "Telegram"
-spotify		= "spotify-launcher"
 calculator	= terminal .. " -e bc -lq"
 resourceMonitor	= terminal .. " -e btop"
 

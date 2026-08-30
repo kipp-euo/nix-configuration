@@ -32,6 +32,7 @@
     ./mako
     ./mpv
     ./nvim
+    ./obsidian
     ./prismlauncher
     ./qt
     ./rofi

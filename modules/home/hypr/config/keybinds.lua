@@ -24,7 +24,7 @@ hl.bind("Print", hl.dsp.exec_cmd(screenshotFullscreen))
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd(screenshotFullscreenSwappy))
 
 hl.bind(mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelection))
-hl.bind("SHIFT + " .. mainMod .. " + Control_l", hl.dsp.exec_cmd(screenshotSelectionSwappy))
+hl.bind(mainModShift .. " + Control_l", hl.dsp.exec_cmd(screenshotSelectionSwappy))
 
 
 -- Dmenu
@@ -37,12 +37,10 @@ hl.bind(mainModShift .. " + R", hl.dsp.exec_cmd(nerdEmojiSelector))
 
 -- Apps
 hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(steam))
-hl.bind(mainModShift .. " + S", hl.dsp.exec_cmd(spotify))
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(discord))
 hl.bind(mainMod .. " + O", hl.dsp.exec_cmd(obsidian))
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(telegram))
 hl.bind(mainMod .. " + P", hl.dsp.exec_cmd(prism_launcher))
 
 
