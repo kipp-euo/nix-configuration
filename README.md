@@ -27,10 +27,10 @@ Backup current flake, update and do `rebuild.sh`
 | `SUPER + B` | Browser | firefox |
 | `SUPER + SHIFT + B` | Resource monitor | btop |
 | `SUPER + D` | Discord client | vesktop |
-| `SUPER + O` | Obsidian |  |
-| `SUPER + P` | Prism launcher |  |
+| `SUPER + O` | Obsidian | |
+| `SUPER + P` | Prism launcher | |
 | `SUPER + Q` | File manager | thunar |
-| `SUPER + S` | Steam |  |
+| `SUPER + S` | Steam | |
 | `SUPER + X` | Calculator | `bc -lq` |
 | `SUPER + SPACE` | App launcher | rofi |
 | `SUPER + R` | Emoji selector | rofi-emoji |
@@ -38,18 +38,18 @@ Backup current flake, update and do `rebuild.sh`
 | `SUPER + Z` | Clipboard history | cliphist |
 | `SUPER + SHIFT + Z` | Zalgo text | Text → T̷͎ͯ͟ȩ̮̓ͭx̡̫̣̽t̺̋̿̓ |
 | `PrintScreen` | Ss | `grimblast -nf copy screen` |
-| `SHIFT + PrintScreen` | Ss → edit with Swappy |  |
-| `SUPER + LCtrl` | Ss selection/window | `grimblast -nf copy area` |
-| `SUPER + SHIFT + LCtrl` | Ss selection/window → edit with Swappy |  |
+| `SHIFT + PrintScreen` | Ss → swappy | Quick editing |
+| `SUPER + LCtrl` | Ss area | `grimblast -nf copy area` |
+| `SUPER + SHIFT + LCtrl` | Ss are → swappy | Quick editing |
 | `SUPER + I` | Color picker | hyprpicker |
 | `SUPER + C` | Close program | SIGTERM |
 | `SUPER + SHIFT + C` | Force close program | SIGKILL |
-| `SUPER + F` | Toggle fullscreen |  |
+| `SUPER + F` | Toggle fullscreen | |
 | `SUPER + SHIFT + F` | Toggle gamemode | Removes decorations, applies gamemoded |
-| `SUPER + V` | Toggle floating |  |
-| `SUPER + G` | Toggle split |  |
-| `SUPER + SHIFT + G` | Toggle split |  |
-| `SUPER + <N>` | Switch to workspace |  |
-| `SUPER + SHIFT + <N>` | Move window to workspace |  |
-| `SUPER + H/J/K/L` | Move focus |  |
-| `SUPER + SHIFT + H/J/K/L` | Resize window |  |
+| `SUPER + V` | Toggle floating | |
+| `SUPER + G` | Toggle split | |
+| `SUPER + SHIFT + G` | Toggle split | |
+| `SUPER + <N>` | Switch to workspace | |
+| `SUPER + SHIFT + <N>` | Move window to workspace | |
+| `SUPER + H/J/K/L` | Move focus | |
+| `SUPER + SHIFT + H/J/K/L` | Resize window | |
