@@ -6,11 +6,11 @@
     package = pkgs.appimage-run.override
     {
       extraPkgs = pkgs: with pkgs; [
-        libayatana-appindicator
-        libayatana-indicator
-        ayatana-ido
-        libdbusmenu
-        libepoxy
+        # libayatana-appindicator
+        # libayatana-indicator
+        # ayatana-ido
+        # libdbusmenu
+        # libepoxy
       ];
     };
   };

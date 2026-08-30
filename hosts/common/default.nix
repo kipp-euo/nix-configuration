@@ -1,17 +1,5 @@
 { pkgs, ... }:
 {
-  nixpkgs.config.allowUnfree = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
-
-  networking.hostName = "pcbg";
-  networking.networkmanager.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us,ru";
-    options = "grp:caps_toggle";
-    variant = "";
-  };
   imports = [
     ../../modules/system/appimage-run
     ../../modules/system/audio
@@ -27,6 +15,7 @@
     ../../modules/system/hypr
     ../../modules/system/kernel
     ../../modules/system/locale
+    ../../modules/system/networking
     ../../modules/system/nix
     ../../modules/system/ntfs
     ../../modules/system/qbtorrent
@@ -37,22 +26,26 @@
     ../../modules/system/thunar
     ../../modules/system/timezone
     ../../modules/system/users
+    ../../modules/system/zapret
   ];
-  environment.systemPackages = with pkgs; [
-    compsize
-    curl
-    ffmpeg
-    gcc
-    gnome-disk-utility
-    gparted
-    jq
-    killall
-    lm_sensors
-    man-db
-    neovim
-    wget
-
-    nix-index
-  ];
+  environment = {
+    sessionVariables.NIXOS_OZONE_WL = "1";
+    environment.systemPackages = with pkgs; [
+      compsize
+      curl
+      ffmpeg
+      gcc
+      gnome-disk-utility
+      gparted
+      jq
+      killall
+      lm_sensors
+      man-db
+      neovim
+      nix-index
+      qrencode
+      wget
+    ];
+  };
   system.stateVersion = "26.05";
 }

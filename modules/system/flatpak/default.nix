@@ -6,6 +6,12 @@
       name = "flathub";
       location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
     }];
-    update.onActivation = true;
+    update = {
+      onActivation = false;
+      auto = {
+        enable = true;
+        onCalendar = "weekly";
+      };
+    };
   };
 }

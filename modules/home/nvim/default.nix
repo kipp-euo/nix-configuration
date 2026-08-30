@@ -14,11 +14,10 @@
   home.packages = with pkgs; [
     neovim
     
-    # LPS
+    # LSP
     bash-language-server
     clang
     docker-language-server
-    hyprls
     lua-language-server
     marksman
     nixd

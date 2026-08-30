@@ -1,5 +1,10 @@
 { ... }:
 {
+  services.xserver.xkb = {
+    layout = "us,ru";
+    options = "grp:caps_toggle";
+    variant = "";
+  };
   i18n.defaultLocale = "ru_RU.UTF-8";
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "ru_RU.UTF-8";

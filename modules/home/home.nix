@@ -6,28 +6,28 @@
     homeDirectory = "/home/kipp";
     stateVersion = "26.05"; 
     packages = with pkgs; [
-      kdePackages.kolourpaint
       audacious
       audacity
       bc
-      tree
-      libjxl
       davinci-resolve
+      kdePackages.kolourpaint
+      libjxl
+      libreoffice
+      tree
     ];
   };
   imports = [
     # ./mime
-    ./vesktop
     ./bash
     ./btop
     ./development
     ./fastfetch
     ./firefox
+    ./fonts
     ./foot
     ./gtk
     ./hypr
     ./hyprpaper
-    ./fonts
     ./libreoffice
     ./mako
     ./mpv
@@ -39,6 +39,7 @@
     ./swappy
     ./swayimg
     ./thunar
+    ./vesktop
     ./waybar
   ];
 }

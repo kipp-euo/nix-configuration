@@ -2,7 +2,7 @@
 {
   services.qbittorrent = {
     enable = true;
-    openFirewall = true; # Opens WebUI and torrenting ports
+    openFirewall = true;
     user = "qbittorrent";
     group = "qbittorrent";
   };

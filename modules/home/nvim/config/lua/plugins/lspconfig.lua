@@ -6,7 +6,6 @@ return {
 		vim.lsp.enable('cssls')
 		vim.lsp.enable('docker_language_server')
 		vim.lsp.enable('html')
-		vim.lsp.enable('hyprls')
 		vim.lsp.enable('jsonls')
 		vim.lsp.enable('lua_ls')
 		vim.lsp.enable('marksman')
