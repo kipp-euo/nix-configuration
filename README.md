@@ -3,7 +3,7 @@
 - Btrfs
 - Chinese cache substituters
 - Hyprland and waybar
-- Neovim (lazy.nvim wih plugin manager)
+- Neovim (lazy.nvim with plugin manager)
 - [Zapret](https://github.com/kartavkun/zapret-discord-youtube)
 ## Notes
 - Gamescope module is not enabled by default.
@@ -40,7 +40,7 @@ Backup current flake, update and do `rebuild.sh`
 | `PrintScreen` | Ss | `grimblast -nf copy screen` |
 | `SHIFT + PrintScreen` | Ss → swappy | Quick editing |
 | `SUPER + LCtrl` | Ss area | `grimblast -nf copy area` |
-| `SUPER + SHIFT + LCtrl` | Ss are → swappy | Quick editing |
+| `SUPER + SHIFT + LCtrl` | Ss area → swappy | Quick editing |
 | `SUPER + I` | Color picker | hyprpicker |
 | `SUPER + C` | Close program | SIGTERM |
 | `SUPER + SHIFT + C` | Force close program | SIGKILL |
@@ -48,7 +48,7 @@ Backup current flake, update and do `rebuild.sh`
 | `SUPER + SHIFT + F` | Toggle gamemode | Removes decorations, applies gamemoded |
 | `SUPER + V` | Toggle floating | |
 | `SUPER + G` | Toggle split | |
-| `SUPER + SHIFT + G` | Toggle split | |
+| `SUPER + SHIFT + G` | Pseudo tile | |
 | `SUPER + <N>` | Switch to workspace | |
 | `SUPER + SHIFT + <N>` | Move window to workspace | |
 | `SUPER + H/J/K/L` | Move focus | |

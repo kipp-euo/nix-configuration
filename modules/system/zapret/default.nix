@@ -62,6 +62,12 @@
     listExclude = [
       "ubisoft.com"
       "origin.com"
+      "github.com"
+      "api.github.com"
+      "raw.githubusercontent.com"
+      "objects.githubusercontent.com"
+      "githubusercontent.com"
+      "githubassets.com"
     ];
     # Добавляем IP адреса в ipset-all.txt
     ipsetAll = [
