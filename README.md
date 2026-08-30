@@ -14,6 +14,11 @@
 - Themes are light mode, everything is moslty plain `#f7f7ff`.
   - I like light mode.
   - I don't need anything fancy.
+## Scripts
+### `rebuild.sh`
+Quickly rebuild current configuration, restart hyprland and waybar
+### `update.sh`
+Backup current flake, update and do `rebuild.sh`
 ## Keybinds
 | Keys | Action | Notes |
 | ------------- | -------------- | -------------- |
@@ -32,10 +37,10 @@
 | `SUPER + SHIFT + R` | Nerd emoji selector | rofi-nerdy |
 | `SUPER + Z` | Clipboard history | cliphist |
 | `SUPER + SHIFT + Z` | Zalgo text | Text → T̷͎ͯ͟ȩ̮̓ͭx̡̫̣̽t̺̋̿̓ |
-| `PrintScreen` | Screenshot | `grimblast -nf copy screen` |
-| `SHIFT + PrintScreen` | Screenshot → edit with Swappy |  |
-| `SUPER + Left Ctrl` | Screenshot selection/window | `grimblast -nf copy area` |
-| `SUPER + SHIFT + Left Ctrl` | Screenshot selection/window → edit with Swappy |  |
+| `PrintScreen` | Ss | `grimblast -nf copy screen` |
+| `SHIFT + PrintScreen` | Ss → edit with Swappy |  |
+| `SUPER + LCtrl` | Ss selection/window | `grimblast -nf copy area` |
+| `SUPER + SHIFT + LCtrl` | Ss selection/window → edit with Swappy |  |
 | `SUPER + I` | Color picker | hyprpicker |
 | `SUPER + C` | Close program | SIGTERM |
 | `SUPER + SHIFT + C` | Force close program | SIGKILL |
@@ -44,12 +49,7 @@
 | `SUPER + V` | Toggle floating |  |
 | `SUPER + G` | Toggle split |  |
 | `SUPER + SHIFT + G` | Toggle split |  |
-| `SUPER + <Number>` | Switch to workspace |  |
-| `SUPER + SHIFT + <Number>` | Move window to workspace |  |
+| `SUPER + <N>` | Switch to workspace |  |
+| `SUPER + SHIFT + <N>` | Move window to workspace |  |
 | `SUPER + H/J/K/L` | Move focus |  |
 | `SUPER + SHIFT + H/J/K/L` | Resize window |  |
-## Scripts
-### `rebuild.sh`
-Quickly rebuild current configuration, restart hyprland and waybar
-### `update.sh`
-Backup current flake, update and do `rebuild.sh`
