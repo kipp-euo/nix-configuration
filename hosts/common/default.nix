@@ -30,7 +30,7 @@
   ];
   environment = {
     sessionVariables.NIXOS_OZONE_WL = "1";
-    environment.systemPackages = with pkgs; [
+    systemPackages = with pkgs; [
       compsize
       curl
       ffmpeg
@@ -43,7 +43,6 @@
       man-db
       neovim
       nix-index
-      qrencode
       wget
     ];
   };

@@ -13,6 +13,7 @@
       kdePackages.kolourpaint
       libjxl
       libreoffice
+      qrencode
       tree
     ];
   };
@@ -28,7 +29,6 @@
     ./gtk
     ./hypr
     ./hyprpaper
-    ./libreoffice
     ./mako
     ./mpv
     ./nvim
