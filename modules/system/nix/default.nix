@@ -24,7 +24,22 @@
   programs.nix-ld = {
     enable = true;
     libraries = with pkgs; [
-      
+      # wayland
+      # fontconfig
+      # xorg.libX11
+      # libxkbcommon
+      # xorg.libXcursor
+      # libdecor
+      # libGL
+      # tinysparql
+      # pyfa
+      # libxinerama
+      # libxrandr
+      # libxi
+      # libxext
+      # alsa-lib
+      # pulseaudio
+      # icu
     ];
   };
 }

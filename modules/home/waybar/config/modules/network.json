@@ -7,7 +7,6 @@
 		"format-disconnected": "", 
 		"tooltip-format": "Interface:\t{ifname}\n\nUp b/s:\t\t{bandwidthUpBits}\n\nDown b/s:\t{bandwidthDownBits}",
 		"tooltip-format-wifi": "Interface:\t{ifname}\n\nNetwork:\t{essid}\n\nStrength:\t{signalStrength}\n\nFreq:\t\t{frequency}\n\nUp b/s:\t\t{bandwidthUpBits}\n\nDown b/s:\t{bandwidthDownBits}",
-		"tooltip-format-disconnected": "Disconnected",
-		"on-click": "rofi-network-manager"
+		"tooltip-format-disconnected": "Disconnected"
 	}
 }

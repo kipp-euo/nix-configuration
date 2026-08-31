@@ -12,4 +12,8 @@
       xdg-desktop-portal-gtk
     ];
   };
+  security.polkit.enable = true;
+  environment.systemPackages = with pkgs; [
+    hyprpolkitagent
+  ];
 }

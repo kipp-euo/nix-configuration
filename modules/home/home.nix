@@ -31,6 +31,7 @@
     ./hyprpaper
     ./mako
     ./mpv
+    ./nm-applet
     ./nvim
     ./obsidian
     ./prismlauncher
