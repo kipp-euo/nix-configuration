@@ -1,9 +1,0 @@
-{
-    "custom/memory": {
-        "interval": 10,
-	"exec": "~/nix-configuration/modules/home/waybar/config/memory.sh",
-        "format": "  {}",
-	"tooltip": false,
-	"min-length": 16
-    }
-}

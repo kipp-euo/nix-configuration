@@ -1,9 +1,0 @@
-{
-	"custom/gpu": {
-		"interval": 10,
-		"exec": "~/nix-configuration/modules/home/waybar/config/gpu_info.sh",
-		"format": "󰾲  {}",
-		"tooltip": false,
-		"min-length": 16
-	}
-}
