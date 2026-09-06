@@ -26,6 +26,7 @@
     ../../modules/system/thunar
     ../../modules/system/timezone
     ../../modules/system/users
+    ../../modules/system/webcam
     ../../modules/system/zapret
   ];
   environment = {
@@ -34,6 +35,7 @@
       compsize
       curl
       ffmpeg
+      file
       gcc
       gnome-disk-utility
       gparted

@@ -15,6 +15,7 @@
     playerctl
     hyprpolkitagent
   ];
+  services.hyprpolkitagent.enable = true;
   xdg.portal.config.common.default = [
     "hyprland"
     "gtk"

@@ -10,6 +10,8 @@ color_light_gray	= "#E9E9F3"
 color_gray		= "#9494A3"
 color_black		= "#1e1d35"
 
+color_green		= "#02b366"
+
 color_light_blue	= "#779be7"
 color_blue		= "#0044cc"
 color_dark_blue		= "#002288"

@@ -58,22 +58,36 @@
       "secure.footprint.net"
       "secure.llnwd.net"
       "tr.rbxcdn.com"
+      "vrchat.com"
+      "vrchat.net"
+      "api.vrchat.cloud"
+      "status.vrchat.com"
+      "vrchat.cloud"
+      "pipeline.vrchat.cloud"
+      "assets.vrchat.com"
+      "creators.vrchat.com"
+      "docs.vrchat.com"
+      "wiki.vrchat.com"
+      "vrchat.community"
+      "vrchatassets.com"
+      "vrcdn.live"
+      "vrcdn.video"
+      "vrcdn.cloud"
+      "files.vrchat.cloud"
+      "cdn.vrchat.com"
+      "vrchat.cloudwww.quora.com"
+      "vrcpm.vrchat.cloud"
     ];
     # Добавляем домены в list-exclude-user.txt (исключения)
     listExclude = [
       "ubisoft.com"
       "origin.com"
-      "github.com"
-      "api.github.com"
-      "raw.githubusercontent.com"
-      "objects.githubusercontent.com"
-      "githubusercontent.com"
-      "githubassets.com"
     ];
     # Добавляем IP адреса в ipset-all.txt
     ipsetAll = [
       "192.168.1.0/24"
       "10.0.0.1"
+      "18.65.39.105"
     ];
     # Добавляем IP адреса в ipset-exclude-user.txt (исключения)
     ipsetExclude = [

@@ -57,14 +57,18 @@ hl.window_rule({
 
 	immediate = true,
 	allows_input = true,
-	rounding = 0,
-	border_size = 0,
+	-- border_color = {
+	-- 	colors = {color_green, color_light_blue },
+	-- 	angle = 90
+	-- },
 	render_unfocused = false,
+	opaque = true,
+	border_size = 0,
+	rounding = 0,
 	no_anim = true,
 	no_blur = true,
 	no_dim = true,
 	no_shadow = true,
-	opaque = true,
 	decorate = false,
 })
 
