@@ -12,7 +12,7 @@ vim.lsp.enable {
 	'rust_analyzer',
 	'systemd_ls',
 	'texlab',
-	'java_language_server',
+	'jdtls',
 }
 
 vim.lsp.config('lua_ls', { settings = {

@@ -9,11 +9,6 @@ require('nvim-treesitter').setup {
 		enable = true,
 	},
 }
-require('nvim-treesitter').install {
-	'rust',
-	'nix',
-	'java'
-}
 vim.api.nvim_create_autocmd('FileType', {
 	pattern = { '<filetype>' },
 	callback = function() vim.treesitter.start() end,

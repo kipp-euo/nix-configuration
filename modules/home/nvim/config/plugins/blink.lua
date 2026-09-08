@@ -5,6 +5,9 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	end,
 })
 require('blink.cmp').setup({
+	snippets = {
+		preset = 'default',
+	},
 	keymap = {
 		preset = 'default',
 		['<Tab>'] = { 'accept', 'fallback' },

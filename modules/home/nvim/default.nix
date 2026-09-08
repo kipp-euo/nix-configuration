@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   home.sessionVariables = {
-    EDITOR = "nvim";
     VISUAL = "nvim";
     MANPAGER = "nvim +Man!";
   };
@@ -36,16 +35,19 @@
   xdg.configFile."nvim/after/ftplugin".source = ./config/after/ftplugin;
   home.packages = with pkgs; [
     tree-sitter
+    ripgrep
 
     # LSP
     bash-language-server
-    clang
+    clang-tools
     docker-language-server
     lua-language-server
     marksman
     nixd
     pyright
     rust-analyzer
+    jdt-language-server
+    systemd-lsp
     systemd-language-server
     texlab
     vscode-langservers-extracted
