@@ -18,6 +18,7 @@
     ../../modules/system/networking
     ../../modules/system/nix
     ../../modules/system/ntfs
+    ../../modules/system/kdeconnect
     ../../modules/system/qbtorrent
     ../../modules/system/security
     ../../modules/system/sober
@@ -39,6 +40,7 @@
       gcc
       gnome-disk-utility
       gparted
+      jdk
       jq
       killall
       lm_sensors

@@ -19,6 +19,7 @@
   };
   imports = [
     # ./mime
+    # ./obsidian
     ./bash
     ./btop
     ./development
@@ -33,7 +34,6 @@
     ./mpv
     ./nm-applet
     ./nvim
-    ./obsidian
     ./prismlauncher
     ./qt
     ./rofi

@@ -1,19 +1,42 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nix-configuration/modules/home/nvim/config";
   home.sessionVariables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
     MANPAGER = "nvim +Man!";
   };
   xdg.mimeApps.defaultApplications."text/plain" = [ "nvim.desktop" ];
-  home.shellAliases = {
-    vi = "nvim";
-    vim = "nvim";
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+    viAlias = true;
+    vimAlias = true;
+    vimdiffAlias = true;
+
+    plugins = with pkgs.vimPlugins; [
+      nvim-highlight-colors
+      {
+        plugin = blink-cmp;
+        config = builtins.readFile ./config/plugins/blink.lua;
+      }
+      {
+        plugin = nvim-lspconfig;
+        config = builtins.readFile ./config/plugins/lspconfig.lua;
+      }
+      {
+        plugin = treesitter-modules-nvim;
+        config = builtins.readFile ./config/plugins/treesitter.lua;
+      }
+    ];
+    initLua = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
+      (builtins.readFile ./config/options.lua)
+      (builtins.readFile ./config/colors.lua)
+    ];
   };
+  xdg.configFile."nvim/after/ftplugin".source = ./config/after/ftplugin;
   home.packages = with pkgs; [
-    neovim
-    
+    tree-sitter
+
     # LSP
     bash-language-server
     clang

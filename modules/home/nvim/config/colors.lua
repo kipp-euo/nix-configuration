@@ -1,3 +1,5 @@
+vim.opt.termguicolors = true
+
 local function hl(group, options)
 	vim.api.nvim_set_hl(0, group, options)
 end
@@ -31,6 +33,7 @@ hl("Identifier",   { fg = c.mid_violet })
 hl("Function",     { fg = c.blue, bold = true })
 hl("Keyword",      { fg = c.violet, bold = true })
 hl("Whitespace",      { fg = c.gray, bold = true })
+hl("Type",      { fg = c.blue })
 
 hl("Pmenu",        { fg = c.black, bg = c.light_gray })
 hl("PmenuSel",     { fg = c.white, bg = c.violet })
@@ -44,4 +47,3 @@ hl("ModeMsg",      { fg = c.dark_violet, bold = true })
 
 hl("NetrwDir",     { fg = c.mid_violet, bold = true })
 hl("NetrwClassify", { fg = c.dark_gray })
-

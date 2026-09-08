@@ -77,6 +77,7 @@
       "cdn.vrchat.com"
       "vrchat.cloudwww.quora.com"
       "vrcpm.vrchat.cloud"
+      "obsidian.md"
     ];
     # Добавляем домены в list-exclude-user.txt (исключения)
     listExclude = [
