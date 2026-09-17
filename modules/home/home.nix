@@ -9,7 +9,7 @@
       audacious
       audacity
       bc
-      davinci-resolve
+      # davinci-resolve
       kdePackages.kolourpaint
       libjxl
       libreoffice

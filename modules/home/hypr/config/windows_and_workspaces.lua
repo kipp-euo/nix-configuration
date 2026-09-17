@@ -56,7 +56,7 @@ hl.window_rule({
 	},
 
 	immediate = true,
-	allows_input = true,
+	-- allows_input = true,
 	-- border_color = {
 	-- 	colors = {color_green, color_light_blue },
 	-- 	angle = 90

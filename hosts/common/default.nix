@@ -4,6 +4,7 @@
     ../../modules/system/appimage-run
     ../../modules/system/audio
     ../../modules/system/bluetooth
+    # ../../modules/system/bootloader/grub
     ../../modules/system/bootloader/systemd-boot
     ../../modules/system/btrfs
     ../../modules/system/firewall
