@@ -1,4 +1,4 @@
 assets/fastfetchLogos
 assets/wallpapers
 lock_backups/*
-hosts/common/hardware-configuration.nix
+hosts/*/hardware-configuration.nix
