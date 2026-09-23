@@ -8,16 +8,16 @@
       rofi-emoji
       rofi-nerdy
     ];
-    cycle = true;
-    font = "JetBrainsMono Nerd Font 12";
-    location = "center";
-    modes = [
-      "drun"
-      "run"
-      "emoji"
-      "nerdy"
-    ];
-    extraConfig = {
+    settings = {
+      modes = [
+        "drun"
+        "run"
+        "emoji"
+        "nerdy"
+      ];
+      cycle = true;
+      font = "JetBrainsMono Nerd Font 12";
+      location = 0;
       show-icons = true;
       case-sensitive = false;
       sidebar-mode = true;
