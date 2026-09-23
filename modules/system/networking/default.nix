@@ -30,50 +30,23 @@
     "net.ipv4.ip_default_ttl" = 65;
     "net.ipv6.conf.all.hop_limit" = 65;
   };
-
-  # networking.networkmanager.dns = "systemd-resolved";
-  # services.resolved = {
-  #   enable = true;
-  #   fallbackDns = [ "1.1.1.1" "1.0.0.1" "8.8.8.8" "8.8.4.4"];
-  #   domains = [ "~." ];
-  #   dnssec = "false";
-  #   dnsovertls = "false";
-  # };
-  #
-  # services.unbound = {
-  #   enable = true;
-  #   enableRootTrustAnchor = true;
-  #   settings = {
-  #     remote-control.control-enable = true;
-  #     server = {
-  #       interface = [ "127.0.0.1" ];
-  #       access-control = [
-  #         "127.0.0.1 allow"
-  #         "192.168.0.0/24 allow"
-  #       ];
-  #       harden-glue = true;
-  #       harden-dnssec-stripped = true;
-  #       use-caps-for-id = false;
-  #       prefetch = true;
-  #       edns-buffer-size = 1232;
-  #       hide-identity = true;
-  #       hide-version = true;
-  #     };
-  #     forward-zone = [
-  #       {
-  #         name = ".";
-  #         forward-tls-upstream = "yes";
-  #         forward-first = "yes"; # Fallback
-  #         forward-addr = [
-  #           "1.1.1.1@853#cloudflare-dns.com"
-  #           "1.0.0.1@853#cloudflare-dns.com"
-  #           "8.8.8.8@853#dns.google"
-  #           "8.8.4.4@853#dns.google"
-  #           "9.9.9.9@853#dns.quad9.net"
-  #           "149.112.112.112@853#dns.quad9.net"
-  #         ];
-  #       }
-  #     ];
-  #   };
-  # };
+  networking.nameservers = [ "127.0.0.1" ];
+  networking.networkmanager.dns = "none";
+  services.dnscrypt-proxy = {
+    enable = true;
+    settings = {
+      sources.public-resolvers = {
+        urls = [ "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md" ];
+        cache_file = "public-resolvers.md";
+        minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3";
+        refresh_delay = 72;
+      };
+      # server_names = [ "cloudflare" ];
+      cache = true;
+      doh_servers = true;
+      require_dnssec = true;
+      require_nolog = true;
+      require_nofilter = true;
+    };
+  };
 }
