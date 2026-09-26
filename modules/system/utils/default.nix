@@ -1,5 +1,8 @@
 { pkgs, ... }:
 {
+  programs.bandwhich.enable = true;
+  programs.wireshark.enable = true;
+  users.users."kipp".extraGroups = [ "wireshark" ];
   environment.systemPackages = with pkgs; [
     # terminal/shell
     compsize

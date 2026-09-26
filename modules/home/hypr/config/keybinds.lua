@@ -1,5 +1,6 @@
 local mainMod = "SUPER"
 local mainModShift = "SUPER + SHIFT"
+local mainModAlt = "SUPER + ALT"
 
 
 -- Terminal
@@ -15,6 +16,7 @@ hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(calculator, {
 	size = { "300", "400" },
 }))
 hl.bind(mainModShift .. " + B", hl.dsp.exec_cmd(resourceMonitor))
+hl.bind(mainModAlt .. " + B", hl.dsp.exec_cmd(bandwhich))
 
 
 -- Screen capture

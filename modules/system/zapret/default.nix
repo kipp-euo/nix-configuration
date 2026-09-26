@@ -5,7 +5,8 @@
   ];
   services.zapret-discord-youtube = {
     enable = true;
-    configName = "general (ALT12)";
+    configName = "general(ALT9)";
+    # configName = "general (ALT12)";
     # configName = "general (FAKE_TLS_AUTO_ALT3)";
 
     # Game Filter: "null" (отключен), "all" (TCP+UDP), "tcp" (только TCP), "udp" (только UDP)

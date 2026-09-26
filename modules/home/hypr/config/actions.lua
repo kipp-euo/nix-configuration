@@ -8,6 +8,7 @@ prism_launcher	= "prismlauncher"
 obsidian	= "obsidian"
 calculator	= terminal .. " -e bc -lq"
 resourceMonitor	= terminal .. " -e btop"
+bandwhich	= terminal .. " -e bandwhich"
 
 clipboardHistory	= "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 emojiSelector		= "rofi -modi emoji -show emoji -emoji-mode copy"
