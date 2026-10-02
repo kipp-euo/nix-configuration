@@ -9,6 +9,7 @@
     ../../modules/system/dns
     ../../modules/system/firewall
     ../../modules/system/flatpak
+    ../../modules/system/powermanagement
     ../../modules/system/fonts
     ../../modules/system/gamemode
     ../../modules/system/git

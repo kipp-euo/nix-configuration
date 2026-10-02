@@ -6,7 +6,7 @@
   services.zapret-discord-youtube = {
     enable = true;
     configName = "general(ALT9)";
-    # configName = "general (ALT12)";
+    # configName = "general(ALT12)";
     # configName = "general (FAKE_TLS_AUTO_ALT3)";
 
     # Game Filter: "null" (отключен), "all" (TCP+UDP), "tcp" (только TCP), "udp" (только UDP)
@@ -88,7 +88,6 @@
     ];
     # Добавляем IP адреса в ipset-all.txt
     ipsetAll = [
-      "192.168.1.0/24"
       "10.0.0.1"
       "18.65.39.105"
     ];
