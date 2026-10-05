@@ -20,6 +20,6 @@
     file-roller
     p7zip
     unzip
-    unrar
+    # unrar
   ];
 }

@@ -9,7 +9,6 @@
     ../../modules/system/dns
     ../../modules/system/firewall
     ../../modules/system/flatpak
-    ../../modules/system/powermanagement
     ../../modules/system/fonts
     ../../modules/system/gamemode
     ../../modules/system/git
@@ -21,6 +20,7 @@
     ../../modules/system/networking
     ../../modules/system/nix
     ../../modules/system/ntfs
+    ../../modules/system/powermanagement
     ../../modules/system/qbtorrent
     ../../modules/system/security
     ../../modules/system/sober
@@ -30,6 +30,7 @@
     ../../modules/system/timezone
     ../../modules/system/users
     ../../modules/system/utils
+    ../../modules/system/vpn
     ../../modules/system/zapret
   ];
   system.stateVersion = "26.05";

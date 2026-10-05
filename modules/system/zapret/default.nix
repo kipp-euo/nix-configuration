@@ -14,6 +14,8 @@
 
     # Добавляем кастомные домены в list-general-user.txt
     listGeneral = [
+      "2ip.io"
+      "rarlab.com"
       "cache.nixos.org"
       "dl.flathub.org"
       "cdngc.net"
