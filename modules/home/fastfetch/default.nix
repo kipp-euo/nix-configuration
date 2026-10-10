@@ -26,7 +26,6 @@
         };
         "printRemaining" = true;
         "preserveAspectRatio" = false;
-        "recache" = false;
         "position" = "left";
         "chafa" = {
           "fgOnly" = false;

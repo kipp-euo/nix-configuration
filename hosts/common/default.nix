@@ -30,8 +30,9 @@
     ../../modules/system/timezone
     ../../modules/system/users
     ../../modules/system/utils
+
     ../../modules/system/vpn
-    ../../modules/system/zapret
+    # ../../modules/system/zapret
   ];
   system.stateVersion = "26.05";
 }
