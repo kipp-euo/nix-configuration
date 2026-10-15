@@ -21,6 +21,7 @@
     ../../modules/system/nix
     ../../modules/system/ntfs
     ../../modules/system/powermanagement
+    ../../modules/system/programming
     ../../modules/system/qbtorrent
     ../../modules/system/security
     ../../modules/system/sober

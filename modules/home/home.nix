@@ -16,7 +16,9 @@
       qrencode
       tree
     ];
+    sessionPath = [ "$HOME/.local/bin" ];
   };
+
   imports = [
     # ./mime
     # ./obsidian
