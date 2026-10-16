@@ -23,27 +23,14 @@
         Locked = false;
       };
     };
-    profiles.kipp = {
+    profiles.default = {
       settings = {
         "general.autoScroll" = true;
         "sidebar.verticalTabs" = true;
-
-        # https://addons.mozilla.org/ru/firefox/addon/profiles_violet/
-        "extensions.activeThemeID" = "{aab1adac-5449-47fd-b836-c2f43dc28f3f}";
-
-        "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "browser.startup.page" = 3;
+        "intl.locale.requested" = "ru,en-US";
+        "sidebar.main.tools" = "opentabs,history";
       };
-      userChrome = ''
-        :root {
-          --toolbarbutton-border-radius: 0px !important;
-          --tab-border-radius: 0px !important;
-          --arrowpanel-border-radius: 0px !important;
-          --arrowpanel-menuitem-border-radius: 0px !important;
-        }
-        * {
-            border-radius: 0 !important;
-        }
-      '';
     };
   };
 }
