@@ -22,5 +22,29 @@
       name = "Papirus";
       package = pkgs.papirus-icon-theme.override { color = "magenta"; };
     };
+    gtk3.extraCss = ''
+      window,
+      window.background,
+      window decoration,
+      headerbar,
+      .titlebar,
+      popover,
+      menu,
+      tooltip {
+        border-radius: 0px !important;
+      }
+    '';
+    gtk4.extraCss = ''
+      window,
+      window.background,
+      window decoration,
+      headerbar,
+      .titlebar,
+      popover,
+      menu,
+      tooltip {
+        border-radius: 0px !important;
+      }
+    '';
   };
 }

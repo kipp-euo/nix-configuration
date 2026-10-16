@@ -13,7 +13,7 @@
       text-color = "#1e1d35";
       background-color = "#f7f7ff";
       border-color = "#8000ff";
-      border-radius = 10;
+      border-radius = 0;
     };
   };
 }
