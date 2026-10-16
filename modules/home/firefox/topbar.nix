@@ -14,7 +14,9 @@
             "placements": {
               "widget-overflow-fixed-list": [],
               "unified-extensions-area": [
-                "_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action"
+                "ublock0_raymondhill_net-browser-action",
+                "_762f9885-5a13-4abd-9c77-433dcd38b8fd_-browser-action",
+                "sponsorblocker_ajay_app-browser-action"
               ],
               "nav-bar": [
                 "reset-pbm-toolbar-button",
@@ -23,8 +25,6 @@
                 "stop-reload-button",
                 "urlbar-container",
                 "vertical-spacer",
-                "ublock0_raymondhill_net-browser-action",
-                "sponsorblocker_ajay_app-browser-action",
                 "browsec_browsec_com-browser-action",
                 "downloads-button",
                 "unified-extensions-button",
@@ -53,16 +53,7 @@
               "sponsorblocker_ajay_app-browser-action",
               "browsec_browsec_com-browser-action"
             ],
-            "dirtyAreaCache": [
-              "nav-bar",
-              "TabsToolbar",
-              "vertical-tabs",
-              "PersonalToolbar",
-              "unified-extensions-area",
-              "toolbar-menubar"
-            ],
-            "currentVersion": 28,
-            "newElementCount": 7
+            "currentVersion": 28
           }
         '';
       };
