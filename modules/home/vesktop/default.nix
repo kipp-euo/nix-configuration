@@ -34,6 +34,18 @@
       };
       extraQuickCss = ''
         * {
+          [class*="avatar"],
+          [class*="mask"],
+          foreignObject,
+          [class*="wrapper"] > svg {
+              border-radius: 0 !important;
+              mask: none !important;
+              clip-path: none !important;
+          }
+          [class*="avatar"] img,
+          [class*="wrapper"] img {
+              border-radius: 0 !important;
+          }
           border-radius: 0 !important;
         }
       '';
