@@ -4,7 +4,6 @@
     VISUAL = "nvim";
     MANPAGER = "nvim +Man!";
   };
-  xdg.mimeApps.defaultApplications."text/plain" = [ "nvim.desktop" ];
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -23,7 +22,7 @@
         config = builtins.readFile ./config/plugins/lspconfig.lua;
       }
       {
-        plugin = treesitter-modules-nvim;
+        plugin = nvim-treesitter;
         config = builtins.readFile ./config/plugins/treesitter.lua;
       }
     ];

@@ -7,7 +7,7 @@
     stateVersion = "26.05"; 
     packages = with pkgs; [
       audacious
-      audacity
+      # audacity
       bc
       # davinci-resolve
       kdePackages.kolourpaint
@@ -20,11 +20,8 @@
   };
 
   imports = [
-    # ./mime
-    # ./obsidian
     ./bash
     ./btop
-    ./development
     ./fastfetch
     ./firefox
     ./fonts
@@ -36,6 +33,7 @@
     ./mpv
     ./nm-applet
     ./nvim
+    ./obsidian
     ./prismlauncher
     ./qt
     ./rofi
@@ -45,5 +43,7 @@
     ./thunar
     ./vesktop
     ./waybar
+
+    # ./claude-code
   ];
 }

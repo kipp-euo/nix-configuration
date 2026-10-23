@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   # TODO: Put more configuration in here
-  # TODO: Make xarchiver work
   programs.thunar = {
     enable = true;
     plugins = with pkgs; [
@@ -16,10 +15,10 @@
   programs.dconf.enable = true;
   programs.xfconf.enable = true;
   environment.systemPackages = with pkgs; [
-    # xarchiver
     file-roller
-    p7zip
-    unzip
+    # p7zip
+    # zip
+    # unzip
     # unrar
   ];
 }

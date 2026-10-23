@@ -12,5 +12,4 @@
       swayimg.slideshow.timeout = 10
     '';
   };
-  xdg.mimeApps.defaultApplications."image/*" = [ "swayimg.desktop" ];
 }

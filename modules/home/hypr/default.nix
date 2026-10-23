@@ -6,15 +6,17 @@
     systemd.variables = [ "--all" ];
   };
   home.packages = with pkgs; [
+    brightnessctl
+    grimblast
     hyprpaper
     hyprpicker
-    grimblast
-    wl-clipboard
-    cliphist
-    brightnessctl
-    playerctl
     hyprpolkitagent
+    playerctl
+    wl-clipboard
   ];
+  services.wl-clip-persist.enable = true;
+  services.cliphist.enable = true;
+
   services.hyprpolkitagent.enable = true;
   xdg.portal.config.common.default = [
     "hyprland"

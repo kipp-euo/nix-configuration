@@ -1,4 +1,28 @@
 { pkgs, ... }:
+let
+  bg = "#F7F7FF";
+  fg = "#1E1D35";
+  dim_bg = "#F4F4FC";
+  colorsCss = ''
+    @define-color window_bg_color ${bg};
+    @define-color view_bg_color ${bg};
+    @define-color headerbar_bg_color ${bg};
+    @define-color headerbar_backdrop_color ${bg};
+    @define-color card_bg_color ${bg};
+    @define-color dialog_bg_color ${bg};
+    @define-color popover_bg_color ${bg};
+    @define-color sidebar_bg_color ${bg};
+
+    @define-color window_fg_color ${fg};
+    @define-color view_fg_color ${fg};
+    @define-color headerbar_fg_color ${fg};
+  '';
+  squareCss = ''
+    * {
+      border-radius: 0;
+    }
+  '';
+in
 {
   home.pointerCursor = {
     enable = true;
@@ -22,29 +46,7 @@
       name = "Papirus";
       package = pkgs.papirus-icon-theme.override { color = "magenta"; };
     };
-    gtk3.extraCss = ''
-      window,
-      window.background,
-      window decoration,
-      headerbar,
-      .titlebar,
-      popover,
-      menu,
-      tooltip {
-        border-radius: 0px !important;
-      }
-    '';
-    gtk4.extraCss = ''
-      window,
-      window.background,
-      window decoration,
-      headerbar,
-      .titlebar,
-      popover,
-      menu,
-      tooltip {
-        border-radius: 0px !important;
-      }
-    '';
+    gtk3.extraCss = colorsCss + squareCss;
+    gtk4.extraCss = colorsCss + squareCss;
   };
 }

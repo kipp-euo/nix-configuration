@@ -31,7 +31,7 @@
     ../../modules/system/timezone
     ../../modules/system/users
     ../../modules/system/utils
-
+    ../../modules/system/vm
     ../../modules/system/vpn
     # ../../modules/system/zapret
   ];

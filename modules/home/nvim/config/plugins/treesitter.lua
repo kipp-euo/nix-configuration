@@ -9,10 +9,6 @@ require('nvim-treesitter').setup {
 		enable = true,
 	},
 }
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { '<filetype>' },
-	callback = function() vim.treesitter.start() end,
-})
 vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.wo[0][0].foldmethod = 'expr'
 vim.opt.foldlevel = 99

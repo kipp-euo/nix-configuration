@@ -3,7 +3,7 @@ hl.config({
 		kb_layout  = "us, ru",
 		kb_variant = "",
 		kb_model   = "",
-		kb_options = "grp:caps_toggle, compose:ralt",
+		kb_options = "grp:caps_toggle,compose:ralt",
 		kb_rules   = "",
 		
 		repeat_rate = 125,

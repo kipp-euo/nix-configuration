@@ -62,14 +62,13 @@ hl.window_rule({
 	-- 	angle = 90
 	-- },
 	render_unfocused = false,
-	opaque = true,
+	decorate = false,
 	border_size = 0,
-	rounding = 0,
+	opaque = true,
 	no_anim = true,
 	no_blur = true,
 	no_dim = true,
 	no_shadow = true,
-	decorate = false,
 })
 
 hl.window_rule({

@@ -22,3 +22,18 @@ vim.lsp.config('lua_ls', { settings = {
 		}
 	}
 }})
+vim.lsp.config('nixd', { settings = {
+	nixd = {
+		nixpkgs = {
+			expr = "import <nixpkgs> { }",
+		},
+		options = {
+			nixos = {
+				expr = '(builtins.getFlake "/home/kipp/nix-configuration").nixosConfigurations."common".options',
+			},
+			home_manager = {
+				expr = '(builtins.getFlake "/home/kipp/nix-configuration").homeConfigurations."kipp".options',
+			},
+		},
+	},
+}})
