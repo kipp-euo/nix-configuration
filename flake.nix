@@ -9,6 +9,7 @@
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
   outputs = {
     self,
