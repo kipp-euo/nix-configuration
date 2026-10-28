@@ -18,10 +18,7 @@
   services.cliphist.enable = true;
 
   services.hyprpolkitagent.enable = true;
-  xdg.portal.config.common.default = [
-    "hyprland"
-    "gtk"
-  ];
+
   wayland.windowManager.hyprland.extraConfig = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
     (builtins.readFile ./config/actions.lua)
     (builtins.readFile ./config/animations.lua)

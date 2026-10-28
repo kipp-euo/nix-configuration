@@ -28,16 +28,22 @@ hl("CursorLineNr", { fg = c.black, bold = true })
 
 hl("Comment",      { fg = c.dark_gray, italic = true })
 hl("Constant",     { fg = c.indigo, bold = true })
-hl("String",       { fg = c.deep_blue })
-hl("Identifier",   { fg = c.mid_violet })
 hl("Function",     { fg = c.blue, bold = true })
+hl("Identifier",   { fg = c.mid_violet })
 hl("Keyword",      { fg = c.violet, bold = true })
-hl("Whitespace",      { fg = c.gray, bold = true })
-hl("Type",      { fg = c.blue })
+hl("String",       { fg = c.deep_blue })
+hl("Type",         { fg = c.blue })
+hl("Whitespace",   { fg = c.gray, bold = true })
 
-hl("Pmenu",        { fg = c.black, bg = c.light_gray })
-hl("PmenuSel",     { fg = c.white, bg = c.violet })
-hl("BlinkCmpDoc",  { fg = c.black, bg = c.light_gray })
+-- Python
+hl("Operator",         { fg = c.dark_violet, bold = true })
+hl("Preproc",          { fg = c.dark_violet, bold = true })
+hl("Statement",        { fg = c.dark_violet, bold = true })
+
+
+hl("Pmenu",                 { fg = c.black, bg = c.light_gray })
+hl("PmenuSel",              { fg = c.white, bg = c.violet })
+hl("BlinkCmpDoc",           { fg = c.black, bg = c.light_gray })
 hl("BlinkCmpSignatureHelp", { fg = c.black, bg = c.light_gray })
 
 hl("StatusLine",   { fg = c.black, bg = c.light_gray, reverse = false })
@@ -45,5 +51,5 @@ hl("StatusLineNC", { fg = c.dark_gray, bg = c.light_gray, reverse = false })
 hl("MsgArea",      { fg = c.black, bg = c.white })
 hl("ModeMsg",      { fg = c.dark_violet, bold = true })
 
-hl("NetrwDir",     { fg = c.mid_violet, bold = true })
+hl("NetrwDir",      { fg = c.mid_violet, bold = true })
 hl("NetrwClassify", { fg = c.dark_gray })
