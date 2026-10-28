@@ -15,3 +15,5 @@ vim.opt.list = true;
 vim.opt.listchars = 'tab:» ,lead:·,trail:·'
 
 vim.g.mapleader = " "
+
+vim.opt.colorcolumn = "81"

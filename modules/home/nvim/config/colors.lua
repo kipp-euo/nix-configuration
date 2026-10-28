@@ -34,6 +34,7 @@ hl("Keyword",      { fg = c.violet, bold = true })
 hl("String",       { fg = c.deep_blue })
 hl("Type",         { fg = c.blue })
 hl("Whitespace",   { fg = c.gray, bold = true })
+hl("ColorColumn",  { bg = c.light_gray })
 
 -- Python
 hl("Operator",         { fg = c.dark_violet, bold = true })

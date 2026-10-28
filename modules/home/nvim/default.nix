@@ -37,6 +37,10 @@
         plugin = which-key-nvim;
         config = builtins.readFile ./config/plugins/which-key.lua;
       }
+      {
+        plugin = conform-nvim;
+        config = builtins.readFile ./config/plugins/conform.lua;
+      }
     ];
     initLua = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
       (builtins.readFile ./config/options.lua)
@@ -63,5 +67,11 @@
     systemd-language-server
     texlab
     vscode-langservers-extracted
+
+    # CLI-formatters
+    stylua
+    ruff
+    shfmt
+    prettier
   ];
 }
