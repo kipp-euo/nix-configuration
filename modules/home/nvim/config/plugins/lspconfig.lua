@@ -1,19 +1,22 @@
 vim.lsp.enable {
+	'basedpyright',
 	'bashls',
 	'clangd',
 	'cssls',
 	'docker_language_server',
 	'html',
+	'jdtls',
 	'jsonls',
 	'lua_ls',
 	'marksman',
 	'nixd',
-	'pyright',
 	'rust_analyzer',
 	'systemd_ls',
 	'texlab',
-	'jdtls',
 }
+-- vim.lsp.inlay_hint.enable(true)
+
+vim.lsp.config('*', { capabilities = require('blink.cmp').get_lsp_capabilities() })
 
 vim.lsp.config('lua_ls', { settings = {
 	Lua = {
@@ -22,18 +25,25 @@ vim.lsp.config('lua_ls', { settings = {
 		}
 	}
 }})
-vim.lsp.config('nixd', { settings = {
-	nixd = {
-		nixpkgs = {
-			expr = "import <nixpkgs> { }",
-		},
-		options = {
-			nixos = {
-				expr = '(builtins.getFlake "/home/kipp/nix-configuration").nixosConfigurations."common".options',
-			},
-			home_manager = {
-				expr = '(builtins.getFlake "/home/kipp/nix-configuration").homeConfigurations."kipp".options',
-			},
+
+vim.lsp.config('clangd', { cmd = {
+	'clangd',
+	'--background-index',
+	'--clang-tidy',
+	'--completion-style=detailed',
+	'--function-arg-placeholders',
+	'--header-insertion=iwyu'
+}})
+
+vim.lsp.config('basedpyright', { settings = { basedpyright = {
+	analysis = {
+		diagnosticSeverityOverrides = {
+			reportAny = "none",
+			reportUnknownVariableType = "none",
+			reportUnknownParameterType = "none",
+			reportUnknownArgumentType = "none",
+			reportUnknownLambdaParamType = "none",
+			reportUnknownMemberType = "none",
 		},
 	},
-}})
+}}})

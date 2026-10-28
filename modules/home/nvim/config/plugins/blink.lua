@@ -1,9 +1,11 @@
-vim.opt.updatetime = 400
+vim.opt.updatetime = 200
+
 vim.api.nvim_create_autocmd("CursorHold", {
 	callback = function()
 		vim.diagnostic.open_float(nil, { focusable = false, close_events = { "CursorMoved", "CursorMovedI", "BufHidden", "InsertCharPre" } })
 	end,
 })
+
 require('blink.cmp').setup({
 	snippets = {
 		preset = 'default',
@@ -16,8 +18,8 @@ require('blink.cmp').setup({
 		nerd_font_variant = 'mono'
 	},
 	completion = {
-		accept = { auto_brackets = { enabled = false }, },
-		documentation = { auto_show = true, auto_show_delay_ms = 500 },
+		accept = { auto_brackets = { enabled = true }, },
+		documentation = { auto_show = true, auto_show_delay_ms = 200 },
 		ghost_text = { enabled = true },
 		menu = {
 			draw = {

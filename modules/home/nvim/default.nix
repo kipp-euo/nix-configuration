@@ -22,8 +22,20 @@
         config = builtins.readFile ./config/plugins/lspconfig.lua;
       }
       {
-        plugin = nvim-treesitter;
+        plugin = nvim-treesitter.withAllGrammars;
         config = builtins.readFile ./config/plugins/treesitter.lua;
+      }
+      {
+        plugin = telescope-nvim;
+        config = builtins.readFile ./config/plugins/telescope.lua;
+      }
+      {
+        plugin = lualine-nvim;
+        config = builtins.readFile ./config/plugins/lualine.lua;
+      }
+      {
+        plugin = which-key-nvim;
+        config = builtins.readFile ./config/plugins/which-key.lua;
       }
     ];
     initLua = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
@@ -35,6 +47,7 @@
   home.packages = with pkgs; [
     tree-sitter
     ripgrep
+    fd
 
     # LSP
     bash-language-server
@@ -43,7 +56,7 @@
     lua-language-server
     marksman
     nixd
-    pyright
+    basedpyright
     rust-analyzer
     jdt-language-server
     systemd-lsp

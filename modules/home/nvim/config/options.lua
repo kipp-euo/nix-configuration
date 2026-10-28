@@ -13,3 +13,5 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.opt.list = true;
 vim.opt.listchars = 'tab:» ,lead:·,trail:·'
+
+vim.g.mapleader = " "
