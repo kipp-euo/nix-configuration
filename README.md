@@ -7,14 +7,17 @@
 - Chinese cache substituters
 - DoH (DNS over HTTPS) with dnscrypt-proxy
 - [Zapret](https://github.com/kartavkun/zapret-discord-youtube)
+## Installation (WIP)
+- Change `username` and `host` in `variables.nix`
+- Run `./install.sh`
 ## Notes
 - Gamescope module is not enabled by default.
   - It breaks fonts, clipboard and locale in certain games. 
   - Gamescope forces the aspect ratio. Some games work just fine at arbitrary aspect ratios and can be used in tiling comfortably (in borderless/windowed mode).
   - I prefer using ingame upscaling and frame capping.
   - It solves problems that I don't have and introduces problems that I wouldn't have.
-## Scripts
-### `rebuild.sh`
-Rebuild current configuration, restart hyprland and waybar service
-### `update.sh`
-Backup the current flake, update flake and run `rebuild.sh`
+## Commands (found at modules/system/nix/commands.nix)
+### `Nix-rebuild`
+Rebuilds current configuration, restarts hyprland and waybar service
+### `Nix-update`
+Backs up the current flake, updates flake and runs `Nix-rebuild`
