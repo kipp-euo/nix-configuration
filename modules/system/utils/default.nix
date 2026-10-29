@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 {
   programs.bandwhich.enable = true;
 
   programs.wireshark.enable = true;
-  users.users."kipp".extraGroups = [ "wireshark" ];
+  users.users.${vars.username}.extraGroups = [ "wireshark" ];
   
   environment.systemPackages = with pkgs; [
     # terminal/shell

@@ -12,7 +12,7 @@ require('blink.cmp').setup({
 	},
 	keymap = {
 		preset = 'default',
-		['<Tab>'] = { 'accept', 'fallback' },
+		['<Tab>'] = { 'accept', 'snippet_forward', 'fallback' },
 	},
 	appearance = {
 		nerd_font_variant = 'mono'

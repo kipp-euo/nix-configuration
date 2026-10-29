@@ -9,7 +9,7 @@
       truecolor = true;
       vim_keys = true;
       disable_mouse = false;
-      rounded_corners = true;
+      rounded_corners = false;
       terminal_sync = true;
       graph_symbol = "braille";
       update_ms = 2000;

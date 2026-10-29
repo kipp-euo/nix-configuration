@@ -10,7 +10,7 @@
         pad = "0x0";
       };
       scrollback = {
-        lines = 100;
+        lines = 1000;
         multiplier = 1.0;
       };
       colors-dark = {

@@ -1,4 +1,4 @@
-{ ... }:
+{ vars, ... }:
 {
   programs.firefox = {
     languagePacks = [
@@ -14,7 +14,7 @@
         Highlights = true;
         Snippets = true;
       };
-      DefaultDownloadDirectory = "/home/kipp/Downloads";
+      DefaultDownloadDirectory = "${vars.home}/Downloads";
       PictureInPicture = true;
       DisableAccounts = true;
       DisableFirefoxScreenshots = true;

@@ -11,50 +11,38 @@
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    nix-flatpak,
-    zapret-discord-youtube,
-    ...
-  } @ inputs:
-  {
-    nixosConfigurations = {
-      laptop = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop/configuration.nix
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      nix-flatpak,
+      zapret-discord-youtube,
+      ...
+    }@inputs:
+    let
+      vars = import ./variables.nix;
+    in
+    {
+      nixosConfigurations = {
+        ${vars.host} = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs vars; };
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/${vars.host}/configuration.nix
 
-          nix-flatpak.nixosModules.nix-flatpak
-          home-manager.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.kipp = ./modules/home/home.nix;
-            };
-          }
-        ];
-      };
-      pc = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs; };
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/pc/configuration.nix
-
-          nix-flatpak.nixosModules.nix-flatpak
-          home-manager.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.kipp = ./modules/home/home.nix;
-            };
-          }
-        ];
+            nix-flatpak.nixosModules.nix-flatpak
+            home-manager.nixosModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit vars; };
+                users.${vars.username} = ./modules/home/home.nix;
+              };
+            }
+          ];
+        };
       };
     };
-  };
 }

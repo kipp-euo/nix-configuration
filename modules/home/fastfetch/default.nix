@@ -1,11 +1,11 @@
-{ ... }:
+{ vars, ... }:
 {
   programs.fastfetch = {
     enable = true;
     settings = {
       "logo" = {
         "type" = "sixel";
-        "source" = "~/nix-configuration/assets/fastfetchLogos/*";
+        "source" = "${vars.config_dir}/assets/fastfetchLogos/*";
         "color" = {
           "1" = "magenta";
           "2" = "magenta";

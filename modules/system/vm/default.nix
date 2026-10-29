@@ -1,7 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 {
   boot.kernelModules = [ "kvm-intel" ]; 
-  users.users."kipp".extraGroups = [ "kvm" ];
+  users.users.${vars.username}.extraGroups = [ "kvm" ];
   environment.systemPackages = with pkgs; [
     qemu
     quickemu

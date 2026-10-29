@@ -1,9 +1,9 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, vars, ... }:
 {
   imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
   nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
 
-  users.users."kipp".extraGroups = [ "minecraft" ];
+  users.users.${vars.username}.extraGroups = [ "minecraft" ];
 
   services.minecraft-server = {
     enable = true;

@@ -8,5 +8,5 @@ if [[ -f "flake.lock" ]]; then
 	cp flake.lock "$BACKUP"
 fi
 
-sudo nix flake update
+nix flake update
 bash ./rebuild.sh

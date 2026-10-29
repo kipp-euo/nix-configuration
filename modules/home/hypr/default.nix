@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, vars, ... }: {
   wayland.windowManager.hyprland = {
     enable = true;
     package = null;
@@ -20,6 +20,9 @@
   services.hyprpolkitagent.enable = true;
 
   wayland.windowManager.hyprland.extraConfig = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
+    ''
+      config_dir = "${vars.config_dir}"
+    ''
     (builtins.readFile ./config/actions.lua)
     (builtins.readFile ./config/animations.lua)
     (builtins.readFile ./config/autostart.lua)

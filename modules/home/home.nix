@@ -1,9 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 {
   programs.home-manager.enable = true;
   home = {
-    username = "kipp";
-    homeDirectory = "/home/kipp";
+    username = "${vars.username}";
+    homeDirectory = "${vars.home}";
     stateVersion = "26.05"; 
     packages = with pkgs; [
       audacious

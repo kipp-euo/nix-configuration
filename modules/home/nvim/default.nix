@@ -13,6 +13,7 @@
 
     plugins = with pkgs.vimPlugins; [
       nvim-highlight-colors
+      friendly-snippets
       {
         plugin = blink-cmp;
         config = builtins.readFile ./config/plugins/blink.lua;
@@ -40,6 +41,10 @@
       {
         plugin = conform-nvim;
         config = builtins.readFile ./config/plugins/conform.lua;
+      }
+      {
+        plugin = gitsigns-nvim;
+        config = builtins.readFile ./config/plugins/gitsigns.lua;
       }
     ];
     initLua = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
@@ -73,5 +78,7 @@
     ruff
     shfmt
     prettier
+    nixfmt
+    rustfmt
   ];
 }

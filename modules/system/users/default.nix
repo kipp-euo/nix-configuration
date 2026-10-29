@@ -1,8 +1,8 @@
-{ ... }:
+{ vars, ... }:
 {
-  users.users."kipp" = {
+  users.users.${vars.username} = {
     isNormalUser = true;
-    description = "Kipp";
+    description = "User";
     extraGroups = [ "networkmanager" "wheel" ];
   };
 }

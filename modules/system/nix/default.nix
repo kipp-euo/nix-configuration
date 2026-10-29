@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  imports = [ ./scripts.nix ];
+
   nixpkgs.config.allowUnfree = true;
   nix = {
     settings = {

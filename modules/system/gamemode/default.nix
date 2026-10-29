@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 {
   programs.gamemode = {
     enable = true;
@@ -13,5 +13,5 @@
       };
     };
   };
-  users.users."kipp".extraGroups = [ "gamemode" ];
+  users.users.${vars.username}.extraGroups = [ "gamemode" ];
 }
