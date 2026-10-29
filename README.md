@@ -16,7 +16,7 @@
   - Gamescope forces the aspect ratio. Some games work just fine at arbitrary aspect ratios and can be used in tiling comfortably (in borderless/windowed mode).
   - I prefer using ingame upscaling and frame capping.
   - It solves problems that I don't have and introduces problems that I wouldn't have.
-## Commands (found at modules/system/nix/commands.nix)
+## Commands
 ### `Nix-rebuild`
 Rebuilds current configuration, restarts hyprland and waybar service
 ### `Nix-update`
