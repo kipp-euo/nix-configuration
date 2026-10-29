@@ -7,6 +7,6 @@
     ../../modules/system/nvidia
     ../../modules/system/btrfs/hdd.nix
     # ../../modules/system/ollama
-    ../../modules/system/minecraft-server
+    # ../../modules/system/minecraft-server
   ];
 }
