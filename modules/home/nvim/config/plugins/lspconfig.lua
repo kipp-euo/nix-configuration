@@ -61,6 +61,8 @@ vim.lsp.config("basedpyright", { settings = { basedpyright = { analysis = {
 		reportUnknownArgumentType = "none",
 		reportUnknownLambdaParamType = "none",
 		reportUnknownMemberType = "none",
+		reportExplicitAny = "none",
+		reportUnusedCallResult = "none",
 	}
 }}}})
 
