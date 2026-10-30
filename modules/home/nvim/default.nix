@@ -14,6 +14,8 @@
     plugins = with pkgs.vimPlugins; [
       nvim-highlight-colors
       friendly-snippets
+      mini-icons
+      nvim-web-devicons
       {
         plugin = blink-cmp;
         config = builtins.readFile ./config/plugins/blink.lua;

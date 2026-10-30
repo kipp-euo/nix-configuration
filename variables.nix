@@ -1,7 +1,7 @@
 rec {
   # Change these
   username = "kipp";
-  host = "laptop";
+  host = "pc";
 
 
   home = "/home/${username}";

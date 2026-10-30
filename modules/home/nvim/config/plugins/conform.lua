@@ -14,7 +14,6 @@ require("conform").setup({
 		css = { "prettier" },
 		scss = { "prettier" },
 		markdown = { "prettier" },
-		tex = { "latexindent" },
 	},
 	format_on_save = false,
 

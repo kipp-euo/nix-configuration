@@ -4,7 +4,7 @@
   home = {
     username = "${vars.username}";
     homeDirectory = "${vars.home}";
-    stateVersion = "26.05"; 
+    stateVersion = "26.05";
     packages = with pkgs; [
       audacious
       # audacity
@@ -17,6 +17,9 @@
       tree
     ];
     sessionPath = [ "$HOME/.local/bin" ];
+    shellAliases = {
+      ll = "ls -lav --color=auto --group-directories-first";
+    };
   };
 
   imports = [
