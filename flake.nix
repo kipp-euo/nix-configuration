@@ -8,7 +8,6 @@
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
     zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
