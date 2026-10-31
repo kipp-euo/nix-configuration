@@ -29,6 +29,7 @@
     profiles.default.settings = {
       "extensions.formautofill.creditCards.enabled" = false;
       "extensions.formautofill.addresses.enabled" = false;
+      "geo.enabled" = false;
     };
   };
 }

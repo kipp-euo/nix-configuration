@@ -49,9 +49,9 @@
           border-radius: 0 !important;
         }
         :root, body {
-          --font-primary: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
-          --font-display: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
-          --font-headline: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+          --font-primary: "JetBrainsMono Nerd Font Thin", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+          --font-display: "JetBrainsMono Nerd Font Thin", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+          --font-headline: "JetBrainsMono Nerd Font Thin", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
           --font-code: "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
         }
 
