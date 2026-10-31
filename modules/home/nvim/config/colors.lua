@@ -1,4 +1,5 @@
 vim.opt.termguicolors = true
+vim.opt.background = "light"
 
 local function hl(group, options)
 	vim.api.nvim_set_hl(0, group, options)

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, vars, ... }:
 {
   home.sessionVariables = {
     VISUAL = "nvim";
@@ -12,10 +12,18 @@
     vimdiffAlias = true;
 
     plugins = with pkgs.vimPlugins; [
-      nvim-highlight-colors
       friendly-snippets
       mini-icons
       nvim-web-devicons
+      telescope-ui-select-nvim
+      {
+        plugin = nvim-highlight-colors;
+        config = "require('nvim-highlight-colors').setup({})";
+      }
+      {
+        plugin = oil-nvim;
+        config = builtins.readFile ./config/plugins/oil.lua;
+      }
       {
         plugin = blink-cmp;
         config = builtins.readFile ./config/plugins/blink.lua;
@@ -52,6 +60,10 @@
     initLua = builtins.foldl' (x: y: x + "\n" + y + "\n") "" [
       (builtins.readFile ./config/options.lua)
       (builtins.readFile ./config/colors.lua)
+      ''
+        vim.g.nix_config_dir = "${vars.config_dir}"
+        vim.g.nix_host = "${vars.host}"
+      ''
     ];
   };
   xdg.configFile."nvim/after/ftplugin".source = ./config/after/ftplugin;
@@ -71,7 +83,6 @@
     rust-analyzer
     jdt-language-server
     systemd-lsp
-    systemd-language-server
     texlab
     vscode-langservers-extracted
 

@@ -29,6 +29,7 @@
     ./firefox
     ./fonts
     ./foot
+    # ./ghostty
     ./gtk
     ./hypr
     ./hyprpaper
