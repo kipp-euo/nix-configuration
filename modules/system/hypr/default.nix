@@ -8,15 +8,14 @@
   programs.uwsm.enable = false;
   xdg.portal = {
     enable = true;
-    # extraPortals = with pkgs; [
-    #   xdg-desktop-portal-hyprland
-    #   xdg-desktop-portal-gtk
-    # ];
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+    config.common.default = [
+      "hyprland"
+      "gtk"
+    ];
   };
-  xdg.portal.config.common.default = [
-    "hyprland"
-    "gtk"
-  ];
 
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];
