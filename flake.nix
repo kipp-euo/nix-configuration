@@ -8,8 +8,9 @@
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=latest";
     };
-    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
+    hyprland.url = "github:hyprwm/Hyprland";
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+    zapret-discord-youtube.url = "github:kartavkun/zapret-discord-youtube";
   };
   outputs =
     {
@@ -37,7 +38,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                extraSpecialArgs = { inherit vars; };
+                extraSpecialArgs = { inherit inputs vars; };
                 users.${vars.username} = ./modules/home/home.nix;
               };
             }
