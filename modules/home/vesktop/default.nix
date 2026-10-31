@@ -48,6 +48,16 @@
           }
           border-radius: 0 !important;
         }
+        :root, body {
+          --font-primary: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+          --font-display: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+          --font-headline: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+          --font-code: "JetBrainsMono Nerd Font", "Noto Sans Mono CJK", "Noto Color Emoji", monospace;
+        }
+
+        code, pre, [class*="codeBlockText"] {
+          font-family: var(--font-code) !important;
+        }
       '';
     };
   };
