@@ -15,24 +15,31 @@
     wl-clipboard
   ];
 
-    xdg.configFile."hypr/hyprtoolkit.conf".text = ''
-      background = 0xFFF7F7FF
-      base = 0xFFE9E9F3
-      alternate_base = 0xFFDDCFFF
-      text = 0xFF1E1D35
-      bright_text = 0xFFF7F7FF
-      accent = 0xFF8000FF
-      accent_secondary = 0xFF5E00CC
-      link_text = 0xFF0044CC
+    xdg.configFile = {
+      "hypr/hyprtoolkit.conf".text = ''
+        background = 0xFFF7F7FF
+        base = 0xFFE9E9F3
+        alternate_base = 0xFFDDCFFF
+        text = 0xFF1E1D35
+        bright_text = 0xFFF7F7FF
+        accent = 0xFF8000FF
+        accent_secondary = 0xFF5E00CC
+        link_text = 0xFF0044CC
 
-      rounding_large = 0
-      rounding_small = 0
+        rounding_large = 0
+        rounding_small = 0
 
-      font_family = JetBrainsMono Nerd Font
-      font_family_monospace = JetBrainsMono Nerd Font Mono
-      font_size = 11
-      icon_theme = Papirus
-    '';
+        font_family = JetBrainsMono Nerd Font
+        font_family_monospace = JetBrainsMono Nerd Font Mono
+        font_size = 11
+        icon_theme = Papirus
+      '';
+      "hypr/xdph.conf".text = ''
+        screencopy {
+          allow_token_by_default = true
+        }
+      '';
+    };
 
   services.wl-clip-persist.enable = true;
   services.cliphist.enable = true;
