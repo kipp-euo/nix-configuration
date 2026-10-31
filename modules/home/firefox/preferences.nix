@@ -23,14 +23,12 @@
         Locked = false;
       };
     };
-    profiles.default = {
-      settings = {
-        "general.autoScroll" = true;
-        "sidebar.verticalTabs" = true;
-        "browser.startup.page" = 3;
-        "intl.locale.requested" = "ru,en-US";
-        "sidebar.main.tools" = "opentabs,history";
-      };
+    profiles.default.settings = {
+      "browser.startup.page" = 3;
+      "general.autoScroll" = true;
+      "intl.locale.requested" = "ru,en-US";
+      "sidebar.main.tools" = "opentabs,history";
+      "sidebar.verticalTabs" = true;
     };
   };
 }

@@ -24,6 +24,14 @@
             border-radius: 0 !important;
         }
       '';
+      userContent = ''
+        * {
+          border-radius: 0 !important;
+        }
+        body, p, article, main, h1, h2, h3, li {
+          font-family: "JetBrainsMono Nerd Font Thin";
+        }
+      '';
     };
   };
 }

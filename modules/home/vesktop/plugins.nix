@@ -71,7 +71,7 @@
         "FakeNitro" = {
             "enabled" = true;
             "enableStickerBypass" = true;
-            "enableStreamQualityBypass" = true;
+            "enableStreamQualityBypass" = false;
             "enableEmojiBypass" = true;
             "transformEmojis" = true;
             "transformStickers" = true;
