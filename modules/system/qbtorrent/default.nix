@@ -5,7 +5,7 @@ in
 {
   services.qbittorrent = {
     enable = true;
-    openFirewall = true;
+    openFirewall = false;
     user = "qbittorrent";
     group = "qbittorrent";
     profileDir = download_dir;

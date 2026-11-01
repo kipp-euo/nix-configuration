@@ -1,6 +1,6 @@
 { vars, ... }:
 let
-  mount_options = [ "compress=zstd:3" "space_cache=v2" "discard=async" "noatime" ];
+  mount_options = [ "compress=zstd:3" "space_cache=v2" "noatime" ];
 in
 {
   fileSystems = {
