@@ -8,7 +8,6 @@
   environment.systemPackages = with pkgs; [
     # terminal/shell
     compsize
-    curl
     ffmpeg
     file
     jq
@@ -24,7 +23,6 @@
     gparted
 
     # What is my ISP doing again?
-    bandwhich
     bmon
     curl
     dig
@@ -40,7 +38,5 @@
     nmap
     socat
     tcpdump
-    wireshark
-    wireshark-cli
   ];
 }

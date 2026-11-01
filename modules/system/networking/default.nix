@@ -1,6 +1,6 @@
-{ ... }:
+{ vars, ... }:
 {
-  networking.hostName = "pcbg";
+  networking.hostName = vars.hostname;
   networking.networkmanager.enable = true;
 
   # Tethering masking

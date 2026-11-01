@@ -2,7 +2,6 @@
 let
   bg = "#F7F7FF";
   fg = "#1E1D35";
-  dim_bg = "#F4F4FC";
   colorsCss = ''
     @define-color window_bg_color ${bg};
     @define-color view_bg_color ${bg};
@@ -27,9 +26,9 @@ in
   home.pointerCursor = {
     enable = true;
     gtk.enable = true;
-    name = "Bibata-Modern-Ice";
-    package = pkgs.bibata-cursors;
-    size = 22;
+    name = "Simp1e-Adw";
+    package = pkgs.simp1e-cursors;
+    size = 26;
   };
   gtk = {
     enable = true;
