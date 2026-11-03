@@ -35,7 +35,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("n", "grr", tb.lsp_references, "references")
 		map("n", "gri", tb.lsp_implementations, "implementation")
 		map("n", "gO", tb.lsp_document_symbols, "document symbols (outline)")
-		map("n", "<leader>fs", tb.lsp_dynamic_workspace_symbols, "workspace symbols")
+		map(
+			"n",
+			"<leader>fs",
+			tb.lsp_dynamic_workspace_symbols,
+			"workspace symbols"
+		)
 		map("n", "<leader>fd", function()
 			tb.diagnostics({ bufnr = 0 })
 		end, "buffer diagnostics")
@@ -89,6 +94,40 @@ vim.lsp.config("basedpyright", {
 })
 
 vim.lsp.config("ruff", {
+	init_options = {
+		settings = {
+			lint = {
+				select = {
+					"E",
+					"W",
+					"F",
+					"I",
+					"N",
+					"D",
+					"ANN",
+					"UP",
+					"B",
+					"A",
+					"C4",
+					"SIM",
+					"PTH",
+					"PERF",
+					"NPY",
+					"PGH",
+					"ERA",
+					"RUF",
+				},
+				ignore = {
+					"ANN401",
+					"D100",
+					"D104",
+					"RUF001",
+					"RUF002",
+					"RUF003",
+				},
+			},
+		},
+	},
 	on_attach = function(client)
 		client.server_capabilities.hoverProvider = false
 	end,
@@ -117,7 +156,7 @@ vim.lsp.config("nixd", {
 				},
 			},
 			diagnostic = {
-				suppress = { "sema-extra-with" }, -- чтобы не ныл на `with pkgs;`
+				suppress = { "sema-extra-with" },
 			},
 		},
 	},
