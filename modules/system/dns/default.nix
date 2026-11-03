@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 {
   networking.nameservers = [ "127.0.0.1" ];
   networking.networkmanager.dns = "none";
@@ -18,5 +18,9 @@
       require_nolog = true;
       require_nofilter = true;
     };
+  };
+  systemd.services.dnscrypt-proxy.serviceConfig = {
+    Restart = lib.mkForce "always";
+    RestartSec = lib.mkForce "5s";
   };
 }

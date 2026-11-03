@@ -19,7 +19,7 @@ require("conform").setup({
 
 	formatters = {
 		stylua      = { prepend_args = { "--column-width", "80" } },
-		ruff_format = { append_args  = { "--line-length", "80" } },
+		ruff_format = { append_args  = { "--line-length", "90" } },
 		nixfmt      = { prepend_args = { "--width=80" } },
 		rustfmt     = { prepend_args = { "--config=max_width=80" } },
 		prettier    = { prepend_args = { "--print-width", "80" } },
