@@ -6,10 +6,10 @@
     homeDirectory = "${vars.home}";
     stateVersion = "26.05";
     packages = with pkgs; [
-      audacious
-      # audacity
-      bc
       # davinci-resolve
+      audacious
+      audacity
+      bc
       kdePackages.kolourpaint
       libjxl
       libreoffice
@@ -23,13 +23,16 @@
   };
 
   imports = [
+    # ./claude-code
+    # ./ghostty
+    # ./ripes
+    # ./telegram
     ./bash
     ./btop
     ./fastfetch
     ./firefox
     ./fonts
     ./foot
-    # ./ghostty
     ./gtk
     ./hypr
     ./hyprpaper
@@ -47,7 +50,5 @@
     ./thunar
     ./vesktop
     ./waybar
-
-    # ./claude-code
   ];
 }

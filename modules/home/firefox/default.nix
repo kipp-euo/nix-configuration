@@ -14,4 +14,8 @@
     enable = true;
     profiles.default.isDefault = true;
   };
+  services.psd = {
+    enable = true;
+    resyncTimer = "1h";
+  };
 }
