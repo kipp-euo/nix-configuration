@@ -1,6 +1,10 @@
 { vars, lib, ... }:
 let
-  download_dir = "${vars.home}/Storage/Downloads/";
+  download_dir =
+    if "${vars.host}" == "pc" then
+      "${vars.home}/Storage/Downloads/"
+    else
+      "${vars.home}/Downloads";
 in
 {
   services.qbittorrent = {
