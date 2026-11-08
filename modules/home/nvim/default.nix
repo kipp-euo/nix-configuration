@@ -68,30 +68,30 @@
   };
   xdg.configFile."nvim/after/ftplugin".source = ./config/after/ftplugin;
   home.packages = with pkgs; [
-    tree-sitter
-    ripgrep
     fd
+    ripgrep
+    tree-sitter
 
     # LSP
+    basedpyright
     bash-language-server
     clang-tools
     docker-language-server
+    jdt-language-server
     lua-language-server
     marksman
     nixd
-    basedpyright
     rust-analyzer
-    jdt-language-server
     systemd-lsp
     texlab
     vscode-langservers-extracted
 
     # CLI-formatters
-    stylua
-    ruff
-    shfmt
-    prettier
     nixfmt
+    prettier
+    ruff
     rustfmt
+    shfmt
+    stylua
   ];
 }

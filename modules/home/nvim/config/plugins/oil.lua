@@ -21,7 +21,7 @@ require("oil").setup({
 		concealcursor = "nvic",
 	},
 	-- Send deleted files to the trash instead of permanently deleting them (:help oil-trash)
-	delete_to_trash = false,
+	delete_to_trash = true,
 	-- Oil will automatically delete hidden buffers after this delay
 	-- You can set the delay to false to disable cleanup entirely
 	-- Note that the cleanup process only starts when none of the oil buffers are currently displayed
