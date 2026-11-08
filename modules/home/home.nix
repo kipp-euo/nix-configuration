@@ -50,5 +50,6 @@
     ./thunar
     ./vesktop
     ./waybar
+    ./wine
   ];
 }
