@@ -1,0 +1,4 @@
+{ ... }:
+{
+  programs.bandwhich.enable = true;
+}

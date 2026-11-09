@@ -1,0 +1,37 @@
+{ vars, ... }:
+{
+  home-manager.users.${vars.username} = {
+    programs.firefox = {
+      languagePacks = [
+        "ru-RU"
+        "en-US"
+      ];
+      policies = {
+        FirefoxHome = {
+          Locked = false;
+          Search = true;
+          TopSites = true;
+          SponsoredTopSites = false;
+          Highlights = true;
+          Snippets = true;
+        };
+        DefaultDownloadDirectory = vars.downloads_dir;
+        DownloadDirectory = vars.downloads_dir;
+        PictureInPicture = true;
+        DisableAccounts = true;
+        DisableFirefoxScreenshots = true;
+        GenerativeAI = {
+          Chatbot = false;
+          Locked = false;
+        };
+      };
+      profiles.default.settings = {
+        "browser.startup.page" = 3;
+        "general.autoScroll" = true;
+        "intl.locale.requested" = "ru,en-US";
+        "sidebar.main.tools" = "opentabs,history";
+        "sidebar.verticalTabs" = true;
+      };
+    };
+  };
+}

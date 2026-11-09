@@ -2,44 +2,67 @@
 {
   # imports = map (path: ../../modules/system + "/${path}") [
   imports = [
-    ../../modules/system/core/audio
-    ../../modules/system/core/bluetooth
-    ../../modules/system/core/bootloader
-    ../../modules/system/core/btrfs
-    ../../modules/system/core/fonts
-    ../../modules/system/core/git
-    ../../modules/system/core/kernel
-    ../../modules/system/core/locale
-    ../../modules/system/core/nix
-    ../../modules/system/core/powermanagement
-    ../../modules/system/core/security
-    ../../modules/system/core/swap
-    ../../modules/system/core/timezone
-    ../../modules/system/core/users
+    ../../modules/core/audio
+    ../../modules/core/bash
+    ../../modules/core/bluetooth
+    ../../modules/core/bootloader
+    ../../modules/core/btrfs
+    ../../modules/core/fonts
+    ../../modules/core/git
+    ../../modules/core/kernel
+    ../../modules/core/locale
+    ../../modules/core/nix
+    ../../modules/core/powermanagement
+    ../../modules/core/security
+    ../../modules/core/swap
+    ../../modules/core/timezone
+    ../../modules/core/users
 
-    ../../modules/system/extra/appimage-run
-    ../../modules/system/extra/flatpak
-    ../../modules/system/extra/gpuScreenRecorder
-    ../../modules/system/extra/hypr
-    ../../modules/system/extra/kdeconnect
-    ../../modules/system/extra/ntfs
-    ../../modules/system/extra/programming
-    ../../modules/system/extra/qbtorrent
-    ../../modules/system/extra/thunar
-    ../../modules/system/extra/utils
-    ../../modules/system/extra/webcam
-    ../../modules/system/extra/wine
+    ../../modules/desktop/firefox
+    ../../modules/desktop/foot
+    ../../modules/desktop/gtk
+    ../../modules/desktop/hypr
+    ../../modules/desktop/hyprpaper
+    ../../modules/desktop/mako
+    ../../modules/desktop/mpv
+    ../../modules/desktop/nvim
+    ../../modules/desktop/qt
+    ../../modules/desktop/rofi
+    ../../modules/desktop/swappy
+    ../../modules/desktop/swayimg
+    ../../modules/desktop/thunar
+    ../../modules/desktop/waybar
 
-    ../../modules/system/gaming/gamemode
-    ../../modules/system/gaming/sober
-    ../../modules/system/gaming/steam
+    ../../modules/extra/appimage-run
+    ../../modules/extra/btop
+    ../../modules/extra/fastfetch
+    ../../modules/extra/flatpak
+    ../../modules/extra/gpuScreenRecorder
+    ../../modules/extra/gui_apps
+    ../../modules/extra/kdeconnect
+    ../../modules/extra/ntfs
+    ../../modules/extra/programming
+    ../../modules/extra/qbtorrent
+    ../../modules/extra/utils
+    ../../modules/extra/vesktop
+    ../../modules/extra/vm
+    ../../modules/extra/webcam
+    ../../modules/extra/wine
 
-    ../../modules/system/network/dns
-    ../../modules/system/network/firewall
-    ../../modules/system/network/network
-    # ../../modules/system/network/vpn
-    ../../modules/system/network/yggdrasil
-    ../../modules/system/network/zapret
+    ../../modules/gaming/gamemode
+    ../../modules/gaming/prismlauncher
+    ../../modules/gaming/sober
+    ../../modules/gaming/steam
+
+    ../../modules/network/bandwhich
+    ../../modules/network/dns
+    ../../modules/network/firewall
+    ../../modules/network/network
+    ../../modules/network/nm-applet
+    # ../../modules/network/vpn
+    ../../modules/network/wireshark
+    ../../modules/network/yggdrasil
+    ../../modules/network/zapret
   ];
   system.stateVersion = "26.05";
 }
