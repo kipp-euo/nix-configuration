@@ -1,4 +1,5 @@
 {
+  # TODO: Use these in configs
   white      = "#f7f7ff";
   light_gray = "#E9E9F3";
   gray       = "#CDCDD8";

@@ -3,10 +3,24 @@
   imports = [ ./scripts.nix ];
 
   nixpkgs.config.allowUnfree = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   nix = {
     channel.enable = false;
+    daemonCPUSchedPolicy = "idle";
+    daemonIOSchedClass = "idle";
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 5d";
+    };
+    optimise = {
+      automatic = true;
+      dates = "daily";
+    };
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      cores = 4;
+      max-jobs = 2;
       warn-dirty = false;
       substituters = [
         "https://cache.nixos.org/"
@@ -14,16 +28,10 @@
         "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
         "https://mirrors.ustc.edu.cn/nix-channels/store"
       ];
-      trusted-public-keys = [
+      # trusted-public-keys = [
         # "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      ];
+      # ];
     };
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 5d";
-    };
-    optimise.automatic = true;
   };
   programs.nix-ld = {
     enable = true;

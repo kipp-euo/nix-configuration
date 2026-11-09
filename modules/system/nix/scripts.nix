@@ -22,9 +22,14 @@ in
         cd ${vars.config_dir}
 
         if [[ -f "flake.lock" ]]; then
-          mkdir -p "lock_backups"
-          BACKUP="$(mktemp -p "./lock_backups" "$(date "+%Y%m%d")-XXXXXX.back")"
-          cp flake.lock "$BACKUP"
+          BACKUP_DIR="lock_backups"
+          mkdir -p "$BACKUP_DIR"
+
+          BACKUP="$(sha256sum "flake.lock" | cut -d' ' -f1)_flake.lock"
+
+          if [ ! -f "$BACKUP_DIR/$BACKUP" ]; then
+            cp flake.lock "$BACKUP_DIR/$BACKUP"
+          fi
         fi
         nix flake update
 

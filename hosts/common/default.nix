@@ -32,8 +32,8 @@
     ../../modules/system/users
     ../../modules/system/utils
     ../../modules/system/vm
-    ../../modules/system/vpn
-    # ../../modules/system/zapret
+    # ../../modules/system/vpn
+    ../../modules/system/zapret
   ];
   system.stateVersion = "26.05";
 }
