@@ -49,6 +49,7 @@
     ../../modules/extra/webcam
     ../../modules/extra/wine
 
+    ../../modules/gaming/cpu
     ../../modules/gaming/gamemode
     ../../modules/gaming/prismlauncher
     ../../modules/gaming/sober
