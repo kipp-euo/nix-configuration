@@ -19,8 +19,8 @@
       dates = "daily";
     };
     settings = {
-      cores = 4;
-      max-jobs = 2;
+      # cores = 4;
+      # max-jobs = 2;
       warn-dirty = false;
       substituters = [
         "https://cache.nixos.org/"
