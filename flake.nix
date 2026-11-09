@@ -45,7 +45,10 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs vars colors; };
-                users.${vars.username} = ./modules/home/home.nix;
+                users.${vars.username} = {
+                  programs.home-manager.enable = true;
+                  home.stateVersion = "26.05";
+                };
               };
             }
           ];
