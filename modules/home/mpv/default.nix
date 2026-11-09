@@ -17,5 +17,4 @@
       background-color="#f7f7ff";
     };
   };
-  # home.file.".config/mpv/scripts/merge_audio_tracks.lua".source = ./config/merge_audio_tracks.lua;
 }

@@ -1,39 +1,45 @@
 { ... }:
 {
+  # imports = map (path: ../../modules/system + "/${path}") [
   imports = [
-    ../../modules/system/appimage-run
-    ../../modules/system/audio
-    ../../modules/system/bluetooth
-    ../../modules/system/bootloader/systemd-boot
-    ../../modules/system/btrfs
-    ../../modules/system/dns
-    ../../modules/system/firewall
-    ../../modules/system/flatpak
-    ../../modules/system/fonts
-    ../../modules/system/gamemode
-    ../../modules/system/git
-    ../../modules/system/gpuScreenRecorder
-    ../../modules/system/hypr
-    ../../modules/system/kdeconnect
-    ../../modules/system/kernel
-    ../../modules/system/locale
-    ../../modules/system/networking
-    ../../modules/system/nix
-    ../../modules/system/ntfs
-    ../../modules/system/powermanagement
-    ../../modules/system/programming
-    ../../modules/system/qbtorrent
-    ../../modules/system/security
-    ../../modules/system/sober
-    ../../modules/system/steam
-    ../../modules/system/swap
-    ../../modules/system/thunar
-    ../../modules/system/timezone
-    ../../modules/system/users
-    ../../modules/system/utils
-    ../../modules/system/vm
-    # ../../modules/system/vpn
-    ../../modules/system/zapret
+    ../../modules/system/core/audio
+    ../../modules/system/core/bluetooth
+    ../../modules/system/core/bootloader
+    ../../modules/system/core/btrfs
+    ../../modules/system/core/fonts
+    ../../modules/system/core/git
+    ../../modules/system/core/kernel
+    ../../modules/system/core/locale
+    ../../modules/system/core/nix
+    ../../modules/system/core/powermanagement
+    ../../modules/system/core/security
+    ../../modules/system/core/swap
+    ../../modules/system/core/timezone
+    ../../modules/system/core/users
+
+    ../../modules/system/extra/appimage-run
+    ../../modules/system/extra/flatpak
+    ../../modules/system/extra/gpuScreenRecorder
+    ../../modules/system/extra/hypr
+    ../../modules/system/extra/kdeconnect
+    ../../modules/system/extra/ntfs
+    ../../modules/system/extra/programming
+    ../../modules/system/extra/qbtorrent
+    ../../modules/system/extra/thunar
+    ../../modules/system/extra/utils
+    ../../modules/system/extra/webcam
+    ../../modules/system/extra/wine
+
+    ../../modules/system/gaming/gamemode
+    ../../modules/system/gaming/sober
+    ../../modules/system/gaming/steam
+
+    ../../modules/system/network/dns
+    ../../modules/system/network/firewall
+    ../../modules/system/network/network
+    # ../../modules/system/network/vpn
+    ../../modules/system/network/yggdrasil
+    ../../modules/system/network/zapret
   ];
   system.stateVersion = "26.05";
 }

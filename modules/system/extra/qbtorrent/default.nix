@@ -4,7 +4,7 @@ let
     if "${vars.host}" == "pc" then
       "${vars.home}/Storage/Downloads/"
     else
-      "${vars.home}/Downloads";
+      "${vars.downloads_dir}/Downloads";
 in
 {
   services.qbittorrent = {

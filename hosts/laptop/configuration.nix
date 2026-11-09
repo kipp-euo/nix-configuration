@@ -4,6 +4,6 @@
     ../common
     ./hardware-configuration.nix
 
-    ../../modules/system/vm
+    ../../modules/system/core/vm
   ];
 }

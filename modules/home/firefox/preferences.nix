@@ -14,7 +14,8 @@
         Highlights = true;
         Snippets = true;
       };
-      DefaultDownloadDirectory = "${vars.home}/Downloads";
+      DefaultDownloadDirectory = vars.downloads_dir;
+      DownloadDirectory = vars.downloads_dir;
       PictureInPicture = true;
       DisableAccounts = true;
       DisableFirefoxScreenshots = true;
