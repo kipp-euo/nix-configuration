@@ -7,4 +7,7 @@
       PS1="\[\e[35m\][\u@\h \w]\$ \[\e[m\]"
     '';
   };
+  home.shellAliases = {
+    ll = "ls -lav --color=auto --group-directories-first";
+  };
 }

@@ -17,16 +17,9 @@
       tree
     ];
     sessionPath = [ "$HOME/.local/bin" ];
-    shellAliases = {
-      ll = "ls -lav --color=auto --group-directories-first";
-    };
   };
 
   imports = [
-    # ./claude-code
-    # ./ghostty
-    # ./ripes
-    # ./telegram
     ./bash
     ./btop
     ./fastfetch
@@ -40,16 +33,13 @@
     ./mpv
     ./nm-applet
     ./nvim
-    ./obsidian
     ./prismlauncher
     ./qt
     ./rofi
-    ./sober
     ./swappy
     ./swayimg
     ./thunar
     ./vesktop
     ./waybar
-    ./wine
   ];
 }

@@ -1,4 +1,4 @@
-{ ... }:
+{ vars, ... }:
 {
   programs.swappy = {
     enable = true;
@@ -14,7 +14,7 @@
         text_size = 20;
         text_font = "sans-serif";
         paint_mode = "brush";
-        save_dir = "$HOME/Media/Images/Screenshots";
+        save_dir = "${vars.media_dir}/Images/Screenshots";
         save_filename_format = "swappy-%Y%m%d-%H%M%S.%N.png";
         custom_color = "rgba(128,0,255,1)";
       };

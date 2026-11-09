@@ -4,9 +4,10 @@
     ../common
     ./hardware-configuration.nix
 
-    ../../modules/system/nvidia
-    ../../modules/system/btrfs/hdd.nix
-    # ../../modules/system/ollama
-    # ../../modules/system/minecraft-server
+    ../../modules/system/core/btrfs/hdd.nix
+    ../../modules/system/core/nvidia
+    ../../modules/system/extra/vm
+    # ../../modules/system/extra/ollama
+    # ../../modules/system/extra/minecraft-server
   ];
 }
