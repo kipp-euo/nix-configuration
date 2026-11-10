@@ -8,10 +8,10 @@ vim.opt.relativenumber = true
 vim.opt.scrolloff = 8
 
 vim.opt.expandtab = false
-vim.opt.shiftwidth = 8
+vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
-vim.opt.softtabstop = 8
-vim.opt.tabstop = 8
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true

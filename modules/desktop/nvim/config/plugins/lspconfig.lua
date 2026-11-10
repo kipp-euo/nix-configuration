@@ -71,7 +71,9 @@ vim.lsp.config("clangd", {
 		"--function-arg-placeholders",
 		"--header-insertion=iwyu",
 	},
-	init_options = { fallbackFlags = { "-std=c++20" } },
+	init_options = {
+		fallbackFlags = { "-std=c++20", "-Wall", "-Wextra", "-Wpedantic" },
+	},
 })
 
 vim.lsp.config("basedpyright", {
