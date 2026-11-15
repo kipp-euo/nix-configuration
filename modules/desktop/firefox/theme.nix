@@ -5,7 +5,7 @@
       policies.ExtensionSettings = {
         "{aab1adac-5449-47fd-b836-c2f43dc28f3f}" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/file/4552784/profiles_violet-1.0.xpi";
-          installation_mode = "normal_installed";
+          installation_mode = "force_installed";
           private_browsing = true;
         };
       };
