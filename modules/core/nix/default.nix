@@ -52,6 +52,7 @@
       # alsa-lib
       # pulseaudio
       # icu
+      # cudatoolkit
     ];
   };
 }

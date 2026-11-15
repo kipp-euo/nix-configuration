@@ -10,7 +10,7 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
@@ -24,10 +24,10 @@
       options = [ "subvol=nix" ];
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/474204c4-1184-4d34-8ae5-5cba5ada6817";
-      fsType = "btrfs";
-      options = [ "subvol=home" ];
+  fileSystems."/boot" =
+    { device = "/dev/disk/by-uuid/9415-811F";
+      fsType = "vfat";
+      options = [ "fmask=0077" "dmask=0077" ];
     };
 
   fileSystems."/swap" =
@@ -36,10 +36,10 @@
       options = [ "subvol=swap" ];
     };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/9415-811F";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/474204c4-1184-4d34-8ae5-5cba5ada6817";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
     };
 
   fileSystems."/home/kipp/.local/share/SteamHDD" =

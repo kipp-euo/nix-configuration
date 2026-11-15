@@ -11,4 +11,7 @@
     proton-ge-bin
     dwproton-bin
   ];
+  # environment.systemPackages = with pkgs; [
+  #   adwsteamgtk
+  # ];
 }
