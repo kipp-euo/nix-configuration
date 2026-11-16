@@ -51,6 +51,7 @@
 
     ../../modules/gaming/cpu
     ../../modules/gaming/gamemode
+    ../../modules/gaming/mangohud
     ../../modules/gaming/prismlauncher
     ../../modules/gaming/sober
     ../../modules/gaming/steam

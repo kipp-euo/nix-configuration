@@ -14,7 +14,6 @@
 - Gamescope module is not enabled by default.
   - It breaks fonts, clipboard and locale in certain games. 
   - Gamescope forces the aspect ratio. Some games work just fine at arbitrary aspect ratios and can be used in tiling comfortably (in borderless/windowed mode).
-  - I prefer using ingame upscaling and frame capping.
   - It solves problems that I don't have and introduces problems that I wouldn't have.
 ## Commands
 ### `Nix-rebuild`
