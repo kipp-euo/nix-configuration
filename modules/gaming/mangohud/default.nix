@@ -20,6 +20,10 @@
         reset_fps_metrics = "Shift_R+F9";
         reload_cfg = "Shift_L+F4";
 
+        toggle_logging = "Shift_L+F2";
+        output_folder = "${vars.documents_dir}/Benchmarks";
+        benchmark_percentiles = "AVG,97,1,0.1";
+
         position = "bottom-left";
         horizontal_stretch = 0;
         horizontal = true;
@@ -29,7 +33,7 @@
         background_color = "1E1D35";
         text_color = "F7F7FF";
 
-        font_size = 18;
+        font_size = 16;
         no_small_font = true;
         font_file = "${pkgs.nerd-fonts.jetbrains-mono}/share/fonts/truetype/NerdFonts/JetBrainsMono/JetBrainsMonoNerdFont-Regular.ttf";
 
@@ -38,7 +42,7 @@
         show_fps_limit = true;
 
         fps = true;
-        fps_metrics = "avg,0.01";
+        fps_metrics = "avg,0.01,0.001";
         frametime = true;
         frame_timing = true;
 
@@ -50,7 +54,7 @@
         io_write = true;
         ram = true;
         swap = true;
-        throttling_status_graph = true;
+        throttling_status = true;
         vram = true;
       };
     };
