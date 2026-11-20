@@ -1,5 +1,15 @@
 { pkgs, ... }:
 {
+  nixpkgs.overlays = [
+    (final: prev: {
+      steam = prev.steam.override (old: {
+        extraEnv = (old.extraEnv or { }) // {
+          PROTON_ENABLE_WAYLAND = "1";
+          SDL_VIDEODRIVER = "wayland,x11";
+        };
+      });
+    })
+  ];
   programs.steam = {
     enable = true;
     protontricks.enable = true;

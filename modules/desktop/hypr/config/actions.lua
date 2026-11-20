@@ -13,7 +13,7 @@ local bandwhich                  = terminal .. " -e bandwhich"
 local clipboardHistory           = "cliphist list | rofi -dmenu | cliphist decode | wl-copy"
 local emojiSelector              = "rofi -modi emoji -show emoji -emoji-mode copy"
 local nerdEmojiSelector          = "rofi -modi nerdy -show nerdy"
-local zalgoText                  = config_dir .. "/modules/rofi/zalgo.sh"
+local zalgoText                  = config_dir .. "/modules/desktop/rofi/zalgo.sh"
 local hyprpicker                 = "hyprpicker -a -f hex -l"
 
 local screenshotSelection        = "grimblast -nf copy area"

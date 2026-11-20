@@ -1,15 +1,22 @@
 { pkgs, vars, ... }:
 {
-  programs.steam = {
-    package = pkgs.steam.override {
-      extraEnv = {
-        MANGOHUD = "1";
-      };
-      extraPkgs = pkgs: [ pkgs.mangohud ];
-    };
-  };
+  nixpkgs.overlays = [
+    (final: prev: {
+      steam = prev.steam.override (old: {
+        extraEnv = (old.extraEnv or { }) // {
+          MANGOHUD = "1";
+        };
+        extraPkgs =
+          p:
+          (if old ? extraPkgs then old.extraPkgs p else [ ])
+          ++ [
+            p.mangohud
+          ];
+      });
+    })
+  ];
 
-  home-manager.users.${vars.username} = {
+  hm = {
     programs.mangohud = {
       enable = true;
       settings = {
@@ -41,21 +48,33 @@
         fps_limit_method = "early";
         show_fps_limit = true;
 
+        # кадры
         fps = true;
         fps_metrics = "avg,0.01,0.001";
         frametime = true;
         frame_timing = true;
 
+        # CPU
         cpu_stats = true;
         cpu_temp = true;
+        cpu_mhz = true;
+        core_load = true;
+        core_bars = true;
+
+        # GPU
         gpu_stats = true;
         gpu_temp = true;
-        io_read = true;
-        io_write = true;
-        ram = true;
-        swap = true;
+        gpu_core_clock = true;
+        gpu_mem_clock = true;
         throttling_status = true;
         vram = true;
+
+        # память и диск
+        ram = true;
+        swap = true;
+        procmem = true;
+        io_read = true;
+        io_write = true;
       };
     };
   };
