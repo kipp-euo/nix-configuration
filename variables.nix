@@ -1,7 +1,7 @@
 rec {
   # Change these
   username = "kipp";
-  host = "pc";
+  host = "laptop";
 
   locale = "ru_RU.UTF-8";
 
