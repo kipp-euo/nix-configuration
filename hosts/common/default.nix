@@ -32,6 +32,7 @@
     ../../modules/desktop/swayimg
     ../../modules/desktop/thunar
     ../../modules/desktop/waybar
+    ../../modules/desktop/quickshell
 
     ../../modules/extra/appimage-run
     ../../modules/extra/btop

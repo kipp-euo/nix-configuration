@@ -86,6 +86,7 @@
       systemd-lsp
       texlab
       vscode-langservers-extracted
+      kdePackages.qtdeclarative
 
       # CLI-formatters
       nixfmt

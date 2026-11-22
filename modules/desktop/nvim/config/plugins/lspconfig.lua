@@ -10,6 +10,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"marksman",
 	"nixd",
+	"qmlls",
 	"ruff",
 	"rust_analyzer",
 	"systemd_ls",
@@ -19,6 +20,10 @@ vim.lsp.config(
 	"*",
 	{ capabilities = require("blink.cmp").get_lsp_capabilities() }
 )
+
+vim.lsp.config("qmlls", {
+	cmd = { "qmlls", "-E" },
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(ev)

@@ -13,7 +13,7 @@
   zramSwap = {
     enable = true;
     algorithm = "zstd";
-    memoryPercent = 100;
+    memoryPercent = 25;
     priority = 100;
   };
   boot.kernel.sysctl = {
