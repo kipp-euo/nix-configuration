@@ -1,0 +1,3 @@
+GPU Screen Recorder GTK status icons, commit 4362e680c27837e67f645f0fbf1eba8a3f351763
+https://git.dec05eba.com/gpu-screen-recorder-gtk/
+Copyright upstream authors. GPL-3.0-only; see LICENSE.

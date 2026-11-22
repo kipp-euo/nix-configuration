@@ -4,8 +4,6 @@
     programs.rofi = {
       enable = true;
       plugins = with pkgs; [
-        rofi-bluetooth
-        rofi-network-manager
         rofi-emoji
         rofi-nerdy
       ];
@@ -39,9 +37,5 @@
       };
       theme = ./theme.rasi;
     };
-    home.packages = with pkgs; [
-      rofi-bluetooth
-      rofi-network-manager
-    ];
   };
 }

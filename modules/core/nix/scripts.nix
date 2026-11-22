@@ -4,6 +4,7 @@ let
     git add .
     sudo nixos-rebuild switch --fallback --flake .#${vars.host}
     hyprctl reload
+    systemctl --user restart quickshell.service
   '';
 in
 {

@@ -31,7 +31,6 @@
     ../../modules/desktop/swappy
     ../../modules/desktop/swayimg
     ../../modules/desktop/thunar
-    ../../modules/desktop/waybar
     ../../modules/desktop/quickshell
 
     ../../modules/extra/appimage-run
@@ -61,7 +60,6 @@
     ../../modules/network/dns
     ../../modules/network/firewall
     ../../modules/network/network
-    ../../modules/network/nm-applet
     # ../../modules/network/vpn
     ../../modules/network/wireshark
     ../../modules/network/yggdrasil

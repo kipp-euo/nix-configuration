@@ -40,16 +40,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "pwvucontrol-menu",
-	match = { class = "com.saivert.pwvucontrol" },
-
-	float = true,
-	pin = true,
-	size = { "800", "300" },
-	move = { "monitor_w*0.95-800", "monitor_h*0.05" },
-})
-
-hl.window_rule({
 	name = "games",
 	match = {
 		tag = "game",
