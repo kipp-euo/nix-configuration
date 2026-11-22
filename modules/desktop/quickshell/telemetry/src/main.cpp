@@ -211,10 +211,12 @@ double readScaled(const fs::path& path, double divisor) {
 PowerDetails readPowerDetails(const fs::path& root, std::map<std::string, BatteryDetail>& cache, bool refreshStatic) {
     PowerDetails result;
     std::error_code ec;
+    std::set<std::string> seenBatteries;
     for (const auto& entry : fs::directory_iterator(root, ec)) {
         const auto type = readText(entry.path() / "type");
         if (type.find("Battery") != std::string::npos) {
             const auto name = entry.path().filename().string();
+            seenBatteries.insert(name);
             const bool isNew = cache.find(name) == cache.end();
             auto& b = cache[name]; b.name = name; b.status = readText(entry.path() / "status");
             while (!b.status.empty() && std::isspace(static_cast<unsigned char>(b.status.back()))) b.status.pop_back();
@@ -238,6 +240,15 @@ PowerDetails readPowerDetails(const fs::path& root, std::map<std::string, Batter
         } else if (type.find("Mains") != std::string::npos || type.find("USB") != std::string::npos) {
             const auto online = readU64Optional(entry.path() / "online");
             if (online) result.acOnline = result.acOnline.value_or(false) || *online != 0;
+        }
+    }
+    // Forget removed batteries so stale data is not reused after hotplug.
+    // Preserve the cache when enumeration failed rather than treating failure
+    // as a successful empty inventory.
+    if (!ec) {
+        for (auto it = cache.begin(); it != cache.end();) {
+            if (!seenBatteries.contains(it->first)) it = cache.erase(it);
+            else ++it;
         }
     }
     return result;
@@ -1697,6 +1708,8 @@ int main(int argc, char** argv) {
 
     auto nextTick = Clock::now() + kSampleInterval;
     std::string pending;
+    constexpr std::size_t maxCommandBytes = 65536;
+    bool discardOversizedCommand = false;
     while (true) {
         const auto now = Clock::now();
         const auto remaining = now < nextTick
@@ -1708,7 +1721,19 @@ int main(int argc, char** argv) {
             char buffer[256];
             const auto bytes = ::read(STDIN_FILENO, buffer, sizeof(buffer));
             if (bytes <= 0) break;
-            pending.append(buffer, static_cast<std::size_t>(bytes));
+            for (ssize_t i = 0; i < bytes; ++i) {
+                const char ch = buffer[i];
+                if (discardOversizedCommand) {
+                    if (ch == '\n') discardOversizedCommand = false;
+                    continue;
+                }
+                if (ch != '\n' && pending.size() >= maxCommandBytes) {
+                    pending.clear();
+                    discardOversizedCommand = true;
+                    continue;
+                }
+                pending.push_back(ch);
+            }
             std::size_t newline = 0;
             while ((newline = pending.find('\n')) != std::string::npos) {
                 const auto command = pending.substr(0, newline);
