@@ -22,5 +22,10 @@
     __GL_LOG_MAX_ANISO = "4"; # Anisotropic filtering 16x for OpenGL
     __GL_MaxFramesAllowed = "1";
   };
+  environment.etc."lact/config.yaml".source = ./config/lact.yaml;
+  systemd.services.lactd.restartTriggers = [ ./config/lact.yaml ];
+  services.lact = {
+    enable = true;
+  };
 }
 

@@ -16,6 +16,10 @@
       url = "github:kartavkun/zapret-discord-youtube";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    qml-language-server = {
+      url = "github:cushycush/qml-language-server";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs =
     {
@@ -29,18 +33,22 @@
     let
       vars = import ./variables.nix;
       colors = import ./colors.nix;
+      system = "x86_64-linux";
     in
     {
       nixosConfigurations = {
         ${vars.host} = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs vars colors; };
-          system = "x86_64-linux";
+          inherit system;
+          specialArgs = { inherit system inputs vars colors; };
           modules = [
             ./hosts/${vars.host}/configuration.nix
 
             nix-flatpak.nixosModules.nix-flatpak
             home-manager.nixosModules.default
             {
+              environment.systemPackages = [
+                inputs.qml-language-server.packages.${system}.default
+              ];
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;

@@ -63,6 +63,7 @@
 
         # GPU
         gpu_stats = true;
+        gpu_power = true;
         gpu_temp = true;
         gpu_core_clock = true;
         gpu_mem_clock = true;

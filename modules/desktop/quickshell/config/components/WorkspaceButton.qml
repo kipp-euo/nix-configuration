@@ -4,41 +4,45 @@ import "../Palette.js" as Palette
 Rectangle {
 	id: root
 
-	property string label: ""
 	property bool active: false
+	property string label: ""
 	property bool urgent: false
-	signal activated()
 
-	implicitWidth: 30
-	implicitHeight: 30
-	width: 30
-	height: width
-	color: active ? Palette.violet : Palette.white
-	border.width: 1
+	signal activated
+
 	border.color: Palette.black
+	border.width: 1
+	border.pixelAligned: true
+	color: active ? Palette.violet : hoverHandler.hovered ? Palette.black : Palette.white 
+	height: width
+	implicitHeight: 30
+	implicitWidth: 30
 	radius: 0
+	width: 30
 
 	Text {
 		anchors.centerIn: parent
-		text: root.label
+		color: (root.active || hoverHandler.hovered) ? Palette.white : Palette.black
 		font.family: "JetBrainsMono Nerd Font"
 		font.pixelSize: 12
 		font.weight: root.active ? Font.DemiBold : Font.Normal
-		color: root.active ? Palette.white : Palette.black
+		text: root.label
 	}
-
 	Rectangle {
-		visible: root.urgent && !root.active
 		anchors.right: parent.right
 		anchors.top: parent.top
-		width: 5
-		height: 5
 		color: Palette.pink
+		height: 5
+		visible: root.urgent && !root.active
+		width: 5
 	}
-
 	MouseArea {
 		anchors.fill: parent
 		cursorShape: Qt.PointingHandCursor
+
 		onClicked: root.activated()
+	}
+	HoverHandler {
+		id: hoverHandler
 	}
 }

@@ -79,7 +79,8 @@
       "vrcdn.cloud"
       "files.vrchat.cloud"
       "cdn.vrchat.com"
-      "vrchat.cloudwww.quora.com"
+      "vrchat.cloud"
+      "quora.com"
       "vrcpm.vrchat.cloud"
       "obsidian.md"
     ];

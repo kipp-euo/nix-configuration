@@ -10,7 +10,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"marksman",
 	"nixd",
-	"qmlls",
+	"qml-language-server",
 	"ruff",
 	"rust_analyzer",
 	"systemd_ls",
@@ -21,8 +21,10 @@ vim.lsp.config(
 	{ capabilities = require("blink.cmp").get_lsp_capabilities() }
 )
 
-vim.lsp.config("qmlls", {
-	cmd = { "qmlls", "-E" },
+vim.lsp.config("qml-language-server", {
+  cmd = { "qml-language-server" },
+  filetypes = { "qml" },
+  root_markers = { { "qmldir", "shell.qml" }, ".git" },
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {

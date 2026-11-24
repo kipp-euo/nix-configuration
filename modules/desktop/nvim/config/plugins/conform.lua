@@ -14,6 +14,7 @@ require("conform").setup({
 		rust = { "rustfmt" },
 		scss = { "prettier" },
 		sh = { "shfmt" },
+		qml = { "qmlformat" },
 	},
 	format_on_save = false,
 
@@ -42,6 +43,7 @@ require("conform").setup({
 		nixfmt = { prepend_args = { "--width=80" } },
 		rustfmt = { prepend_args = { "--config=max_width=80" } },
 		prettier = { prepend_args = { "--print-width", "80" } },
+		qmlformat = { prepend_args = { "-t", "-n", "-S" } },
 	},
 })
 

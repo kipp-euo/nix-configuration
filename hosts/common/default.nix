@@ -17,6 +17,7 @@
     ../../modules/core/swap
     ../../modules/core/timezone
     ../../modules/core/users
+    ../../modules/core/firmware
 
     ../../modules/desktop/firefox
     ../../modules/desktop/foot

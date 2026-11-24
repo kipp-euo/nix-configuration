@@ -1,12 +1,14 @@
-{ pkgs, lib, ... }:
+{
+  pkgs,
+  lib,
+  colors,
+  ...
+}:
 let
   qmlPath = lib.makeSearchPath "lib/qt-6/qml" [
     pkgs.kdePackages.qtdeclarative
     pkgs.quickshell
   ];
-
-  # Keep QML colors sourced from the repository's shared Nix palette.
-  colors = import ../../../colors.nix;
 
   telemetry = pkgs.callPackage ./telemetry/package.nix { };
   worldclock = pkgs.callPackage ./worldclock/package.nix { };
@@ -39,7 +41,13 @@ in
   services.upower.enable = true;
 
   hm = {
-    home.packages = [ telemetry worldclock filesystems audiometer pkgs.smartmontools ];
+    home.packages = [
+      telemetry
+      worldclock
+      filesystems
+      audiometer
+      pkgs.smartmontools
+    ];
 
     home.sessionVariables = {
       QML_IMPORT_PATH = qmlPath;
